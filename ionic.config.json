@@ -1,0 +1,7 @@
+{
+  "name": "aluminios-loga",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
