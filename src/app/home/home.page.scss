@@ -7,7 +7,7 @@
 
 .rubik-main-title {
   font-family: "Rubik", sans-serif;
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 4.5vw, 2.5rem);
   font-weight: 600;
   font-style: normal;
 }
@@ -35,6 +35,21 @@ ion-toolbar {
 
 .tab {
   font-size: 1.2rem;
+}
+
+ion-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Oculta el icono de menú hamburguesa en pantallas grandes */
+.mobile-menu-icon {
+  display: none;
+}
+
+/* Muestra los botones del menú en pantallas grandes */
+.desktop-menu {
+  display: flex;
 }
 
 h2 {
@@ -79,12 +94,12 @@ h2 {
 }
 
 .centered-title {
-  font-size: 4rem;
+  font-size: clamp(1.5rem, 6vw, 4rem);
   margin-bottom: 1rem;
 }
 
 .centered-description {
-  font-size: 2rem;
+  font-size: clamp(1rem, 3vw, 2rem);
   margin-bottom: 1.5rem;
   max-width: 650px;
 }
@@ -105,19 +120,13 @@ ion-button {
   right: 12%;
   transform: translate(0, -50%);
   z-index: 3;
-  min-width: 600px;
+  min-width: 400px;
 }
 
-/* Imagen superior derecha */
 .sub-image {
   position: absolute;
-  width: 400px;
-  height: 400px;
   overflow: hidden;
-
-  /* Sombra leve */
   box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
-  animation-delay: 1.5s;
 }
 
 /* Imagen superior que cruza por la esquina inferior derecha */
@@ -137,7 +146,7 @@ ion-button {
 /* Imagen inferior que cruza por la esquina superior izquierda */
 .sub-image-2 {
   bottom: -25px;
-  // right: -25px;
+  right: 200px;
   
   /* Borde minimalista con desvanecimiento en los lados izquierdo y superior */
   // border-top: 3px solid transparent;
@@ -224,7 +233,142 @@ footer {
 }
 
 @media (max-width:768px) {
+  ion-toolbar {
+    padding-inline: 1rem;
+    height: 100px;
+  }
+
   .photo-gallery {
     flex-direction: column;
+  }
+
+  /* Oculta los botones del menú en pantallas pequeñas */
+  .desktop-menu {
+    display: none;
+  }
+
+  /* Muestra el icono de menú hamburguesa en pantallas pequeñas */
+  .mobile-menu-icon {
+    display: block;
+  }
+}
+
+/* Media Querys para las dos imagenes de la primera vista */
+@media(min-width: 1750px) {
+  .sub-image {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (min-width: 1500px) and (max-width: 1749px) {
+  .sub-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .centered-content {
+    left: 8%;
+  }
+
+  .additional-images {
+    right: 8%;
+  }
+}
+
+@media(min-width: 1250px) and (max-width: 1499px) {
+  .additional-images {
+    right: 12%;
+    top: 71%;
+  }
+
+  .sub-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .sub-image-2 {
+    bottom: -25px;
+    right: 90px;
+  }
+}
+
+@media(min-width: 1080px) and (max-width: 1249px) {
+  .additional-images {
+    right: 12%;
+    top: 71%;
+  }
+
+  .sub-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .sub-image-2 {
+    bottom: -25px;
+    right: 90px;
+  }
+}
+
+@media(min-width: 800px) and (max-width: 1079px) {
+  .additional-images {
+    right: 12%;
+    top: 73%;
+  }
+
+  .sub-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .sub-image-2 {
+    bottom: -25px;
+    right: 75px;
+  }
+}
+
+@media(min-width: 400px) and (max-width: 799px) {
+  .additional-images {
+    right: 12%;
+    top: 68%;
+  }
+
+  .sub-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .sub-image-2 {
+    bottom: -25px;
+    right: 75px;
+  }
+}
+
+@media(max-width: 399px) {
+  .additional-images {
+    right: 12%;
+    top: 68%;
+  }
+
+  .sub-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .centered-content {
+    left: 3%;
+  }
+
+  .additional-images {
+    right: 5%;
+  }
+
+  .sub-image-1 {
+    display: none;
+  }
+
+  .sub-image-2 {
+    bottom: -70px;
+    right: 28px;
   }
 }

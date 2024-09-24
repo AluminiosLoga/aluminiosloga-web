@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 declare var Lightbox: any;
 
 @Component({
@@ -14,7 +15,7 @@ export class HomePage {
   imgList3: any;
   imgList4: any;
 
-  constructor() {
+  constructor(private menu: MenuController) {
     this.imgList1 = [
       'svc1.png',
       'svc2.png',
@@ -100,5 +101,15 @@ export class HomePage {
       toolbar?.classList.remove('white-toolbar');
       toolbar?.classList.add('transparent-toolbar');
     }
+  }
+
+  // Abre el menú
+  openMenu() {
+    this.menu.open();
+  }
+
+  // Cierra el menú
+  closeMenu() {
+    this.menu.close();
   }
 }

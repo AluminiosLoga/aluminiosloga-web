@@ -6,21 +6,22 @@
       </ion-title>
     </div>
 
-    <ion-buttons slot="end">
+    <!-- Botones visibles en pantallas grandes -->
+    <ion-buttons slot="end" class="desktop-menu">
       <ion-button class="tab"> Inicio </ion-button>
-    </ion-buttons>
-    <ion-buttons slot="end">
       <ion-button class="tab"> Productos </ion-button>
-    </ion-buttons>
-    <ion-buttons slot="end">
       <ion-button class="tab"> Contacto </ion-button>
+      <ion-icon
+        style="--color: white;"
+        [(ngModel)]="paletteToggle"
+        (click)="toggleChange(iconThemeMode === 'sunny-outline' ? 'moon-outline' : 'sunny-outline')"
+        [name]="iconThemeMode"></ion-icon>
     </ion-buttons>
-    <ion-icon
-      style="--color: white; font-size: 1.5rem; cursor: pointer;"
-      slot="end"
-      [(ngModel)]="paletteToggle"
-      (click)="toggleChange(iconThemeMode === 'sunny-outline' ? 'moon-outline' : 'sunny-outline')"
-      [name]="iconThemeMode"></ion-icon>
+
+    <!-- Icono de menú hamburguesa visible en pantallas pequeñas -->
+    <ion-buttons slot="end" class="mobile-menu-icon">
+      <ion-icon name="menu-outline" (click)="openMenu()"></ion-icon>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -145,4 +146,25 @@
   <footer>
     <h2>Contacto</h2>
   </footer>
+</ion-content>
+
+<!-- Menú lateral -->
+<ion-menu side="end" content-id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <ion-item (click)="closeMenu()">Inicio</ion-item>
+      <ion-item (click)="closeMenu()">Productos</ion-item>
+      <ion-item (click)="closeMenu()">Contacto</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-content id="main-content">
+  <!-- El contenido principal de la página -->
 </ion-content>
