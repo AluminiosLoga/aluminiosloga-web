@@ -31,8 +31,12 @@
                 "output": "./svg"
               }
             ],
-            "styles": ["src/global.scss", "src/theme/variables.scss"],
-            "scripts": []
+            "styles": [
+              "src/global.scss",
+              "src/theme/variables.scss",
+               "node_modules/lightbox2/dist/css/lightbox.css"
+            ],
+            "scripts": ["node_modules/lightbox2/dist/js/lightbox-plus-jquery.js"]
           },
           "configurations": {
             "production": {
@@ -111,8 +115,12 @@
                 "output": "./svg"
               }
             ],
-            "styles": ["src/global.scss", "src/theme/variables.scss"],
-            "scripts": []
+            "styles": [
+              "src/global.scss",
+              "src/theme/variables.scss",
+              "node_modules/lightbox2/dist/css/lightbox.css"
+            ],
+            "scripts": ["node_modules/lightbox2/dist/js/lightbox-plus-jquery.js"]
           },
           "configurations": {
             "ci": {

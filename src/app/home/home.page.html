@@ -1,20 +1,148 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header>
+  <ion-toolbar class="transparent-toolbar" id="toolbar">
+    <div style="width: fit-content; margin: 1rem 0;">
+      <ion-title class="rubik-main-title" style="cursor: pointer;">
+        Aluminios Loga
+      </ion-title>
+    </div>
+
+    <ion-buttons slot="end">
+      <ion-button class="tab"> Inicio </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button class="tab"> Productos </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button class="tab"> Contacto </ion-button>
+    </ion-buttons>
+    <ion-icon
+      style="--color: white; font-size: 1.5rem; cursor: pointer;"
+      slot="end"
+      [(ngModel)]="paletteToggle"
+      (click)="toggleChange(iconThemeMode === 'sunny-outline' ? 'moon-outline' : 'sunny-outline')"
+      [name]="iconThemeMode"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [scrollEvents]="true" (ionScroll)="onScroll($event)">
+  <!-- Contenedor con la imagen, overlay oscuro y el contenido centrado -->
+  <div class="image-container">
+    <ion-img
+      src="../../assets/img/pic-1.png"
+      style="width: 100%;"
+    ></ion-img>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <!-- Capa oscura superpuesta -->
+    <div class="image-overlay"></div>
+
+    <!-- Contenido centrado en la imagen -->
+    <div class="centered-content anim">
+      <h2 class="centered-title">¡FABRICAMOS DE TODO!</h2>
+      <h2 class="centered-description">
+        Contamos con servicio a domicilio en toda el <strong><u>Área Metropolitana de Monterrey</u></strong>
+      </h2>
+      <ion-button>Contactar</ion-button>
+    </div>
+
+     <!-- Imagenes adicionales sobre la imagen principal -->
+     <div class="additional-images">
+      <!-- Imagen superior derecha -->
+      <div class="sub-image sub-image-1 anim">
+        <ion-img src="../../assets/img/sub-pic-1.png"></ion-img>
+      </div>
+
+      <!-- Imagen inferior derecha -->
+      <div class="sub-image sub-image-2 anim">
+        <ion-img src="../../assets/img/sub-pic-2.png"></ion-img>
+      </div>
+    </div>
   </div>
+
+  <div class="products_container">
+    <div class="products_title">
+      <h2>¡CONOCE NUESTROS SERVICIOS!</h2>
+    </div>
+
+    <div class="photo-gallery">
+      <div class="column">
+        @for (img of imgList1; track $index) {
+          <div class="photo">
+            <a
+              [href]="'../../assets/img/services/' + img"
+              data-lightbox="models" data-title="'caption' + $index"
+            >
+              <img [src]="'../../assets/img/services/' + img" alt="">
+            </a>
+          </div>
+        }
+      </div>
+
+      <div class="column">
+        @for (img of imgList2; track $index) {
+          <div class="photo">
+            <a
+              [href]="'../../assets/img/services/' + img"
+              data-lightbox="models" data-title="'caption' + $index"
+            >
+              <img [src]="'../../assets/img/services/' + img" alt="">
+            </a>
+          </div>
+        }
+      </div>
+
+      <div class="column">
+        @for (img of imgList3; track $index) {
+          <div class="photo">
+            <a
+              [href]="'../../assets/img/services/' + img"
+              data-lightbox="models" data-title="'caption' + $index"
+            >
+              <img [src]="'../../assets/img/services/' + img" alt="">
+            </a>
+          </div>
+        }
+      </div>
+
+      <div class="column">
+        @for (img of imgList4; track $index) {
+          <div class="photo">
+            <a
+              [href]="'../../assets/img/services/' + img"
+              data-lightbox="models" data-title="'caption' + $index"
+            >
+              <img [src]="'../../assets/img/services/' + img" alt="">
+            </a>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+
+  <div style="background-color: #4185AA; padding: 2rem 0;">
+    <div class="products_title">
+      <h2>¿Cómo puedo cotizar mi pedido?</h2>
+    </div>
+  </div>
+
+  <div style="background-color: rgb(0, 255, 34);">
+    <div class="products_title">
+      <h2>Nosotros te decimos como llegar</h2>
+    </div>
+  </div>
+
+  <div style="background-color: rgb(251, 255, 0);">
+    <div class="products_title">
+      <h2>Preguntas frecuentes</h2>
+    </div>
+  </div>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="logo-whatsapp"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <footer>
+    <h2>Contacto</h2>
+  </footer>
 </ion-content>
