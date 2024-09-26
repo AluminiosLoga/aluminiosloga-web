@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
 declare var Lightbox: any;
 
@@ -9,13 +10,13 @@ declare var Lightbox: any;
 })
 export class HomePage {
   paletteToggle = false;
-  iconThemeMode: string = 'sunny-outline';
+  iconThemeMode: any = 'sunny-outline';
   imgList1: any;
   imgList2: any;
   imgList3: any;
   imgList4: any;
 
-  constructor(private menu: MenuController) {
+  constructor(private menu: MenuController, private router: Router) {
     this.imgList1 = [
       'svc1.png',
       'svc2.png',
@@ -72,6 +73,10 @@ export class HomePage {
       'resizeDuration': 200,
       'wrapAround': true
     });
+  }
+
+  navigateTo() {
+    this.router.navigate(['/gallery']);
   }
 
   // Check/uncheck the toggle and update the palette based on isDark

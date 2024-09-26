@@ -13,7 +13,6 @@
       <ion-button class="tab"> Contacto </ion-button>
       <ion-icon
         style="--color: white;"
-        [(ngModel)]="paletteToggle"
         (click)="toggleChange(iconThemeMode === 'sunny-outline' ? 'moon-outline' : 'sunny-outline')"
         [name]="iconThemeMode"></ion-icon>
     </ion-buttons>
@@ -67,7 +66,7 @@
     <ion-grid class="our_services">
       <ion-row>
         <ion-col>
-          <div class = "card">
+          <div class = "card" (click)="navigateTo()">
             <img src="../../assets/img/services/svc22.png" alt="Canceles para baño">
             <div class="card-content">
               <h2>
@@ -76,7 +75,7 @@
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.
               </p>
-              <a href="#" class="button">
+              <a class="button">
                 Ver mas
                 <ion-icon name="arrow-forward-outline"></ion-icon>
               </a>
@@ -260,8 +259,6 @@
   <footer>
     <h2>Contacto</h2>
   </footer>
-
-  <router-outlet></router-outlet>
 </ion-content>
 
 <!-- Menú lateral -->
@@ -280,9 +277,5 @@
     </ion-list>
   </ion-content>
 </ion-menu>
-
-<ion-content id="main-content">
-  <!-- El contenido principal de la página -->
-</ion-content>
 
 <!-- Closets, Vitrinas  -->
