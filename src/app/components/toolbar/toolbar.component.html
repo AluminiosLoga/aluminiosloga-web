@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar class="main-ion-toolbar" [ngClass]="toolbarClass" id="toolbar">
+    <div 
+      style="width: fit-content; 
+        margin: 1rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;"
+    >
+      <ion-icon *ngIf="backButton" style="margin-right: .5rem; font-size: 1.8rem;" name="arrow-back" (click)="navigateTo('home')"></ion-icon>
+      <ion-title class="rubik-main-title" style="cursor: pointer;">
+        Aluminios Loga
+      </ion-title>
+    </div>
+
+    <!-- Botones visibles en pantallas grandes -->
+    <ion-buttons slot="end" class="desktop-menu">
+      <ion-button class="tab"> Inicio </ion-button>
+      <ion-button class="tab"> Productos </ion-button>
+      <ion-button class="tab"> Contacto </ion-button>
+      <ion-icon
+        (click)="toggleChange(iconThemeMode === 'sunny-outline' ? 'moon-outline' : 'sunny-outline')"
+        [name]="iconThemeMode"></ion-icon>
+    </ion-buttons>
+
+    <!-- Icono de menú hamburguesa visible en pantallas pequeñas -->
+    <ion-buttons slot="end" class="mobile-menu-icon">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>

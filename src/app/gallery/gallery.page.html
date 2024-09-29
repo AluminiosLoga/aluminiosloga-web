@@ -1,13 +1,63 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>gallery</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-toolbar [backButton]="true"></app-toolbar>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">gallery</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="products_container">
+    <div class="products_title">
+      <h2>Galería</h2>
+    </div>
+
+    <div class="photo-gallery">
+      <div class="column">
+        @for (img of imgList1; track $index) {
+          <div class="photo">
+            <a
+              [href]="'../../assets/img/services/' + img"
+              data-lightbox="models" data-title="'caption' + $index"
+            >
+              <img [src]="'../../assets/img/services/' + img" alt="">
+            </a>
+          </div>
+        }
+      </div>
+  
+      <div class="column">
+        @for (img of imgList2; track $index) {
+          <div class="photo">
+            <a
+              [href]="'../../assets/img/services/' + img"
+              data-lightbox="models" data-title="'caption' + $index"
+            >
+              <img [src]="'../../assets/img/services/' + img" alt="">
+            </a>
+          </div>
+        }
+      </div>
+  
+      <div class="column">
+        @for (img of imgList3; track $index) {
+          <div class="photo">
+            <a
+              [href]="'../../assets/img/services/' + img"
+              data-lightbox="models" data-title="'caption' + $index"
+            >
+              <img [src]="'../../assets/img/services/' + img" alt="">
+            </a>
+          </div>
+        }
+      </div>
+  
+      <div class="column">
+        @for (img of imgList4; track $index) {
+          <div class="photo">
+            <a
+              [href]="'../../assets/img/services/' + img"
+              data-lightbox="models" data-title="'caption' + $index"
+            >
+              <img [src]="'../../assets/img/services/' + img" alt="">
+            </a>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
 </ion-content>

@@ -1,28 +1,4 @@
-<ion-header>
-  <ion-toolbar class="main-ion-toolbar transparent-toolbar" id="toolbar">
-    <div style="width: fit-content; margin: 1rem 0;">
-      <ion-title class="rubik-main-title" style="cursor: pointer;">
-        Aluminios Loga
-      </ion-title>
-    </div>
-
-    <!-- Botones visibles en pantallas grandes -->
-    <ion-buttons slot="end" class="desktop-menu">
-      <ion-button class="tab"> Inicio </ion-button>
-      <ion-button class="tab"> Productos </ion-button>
-      <ion-button class="tab"> Contacto </ion-button>
-      <ion-icon
-        style="--color: white;"
-        (click)="toggleChange(iconThemeMode === 'sunny-outline' ? 'moon-outline' : 'sunny-outline')"
-        [name]="iconThemeMode"></ion-icon>
-    </ion-buttons>
-
-    <!-- Icono de menú hamburguesa visible en pantallas pequeñas -->
-    <ion-buttons slot="end" class="mobile-menu-icon">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<app-toolbar [startTransparent]="true"></app-toolbar>
 
 <ion-content [scrollEvents]="true" (ionScroll)="onScroll($event)" id="main-content">
   <!-- Contenedor con la imagen, overlay oscuro y el contenido centrado -->
@@ -66,7 +42,7 @@
     <ion-grid class="our_services">
       <ion-row>
         <ion-col>
-          <div class = "card" (click)="navigateTo()">
+          <div class = "card" (click)="navigateTo('gallery')">
             <img src="../../assets/img/services/svc22.png" alt="Canceles para baño">
             <div class="card-content">
               <h2>
@@ -84,7 +60,7 @@
         </ion-col>
 
         <ion-col>
-          <div class = "card">
+          <div class = "card" (click)="navigateTo('gallery')">
             <img src="../../assets/img/services/svc21.png" alt="Repisas">
             <div class="card-content">
               <h2>
@@ -102,7 +78,7 @@
         </ion-col>
 
         <ion-col>
-          <div class = "card">
+          <div class = "card" (click)="navigateTo('gallery')">
             <img src="../../assets/img/services/svc13.png" alt="Cocinetas">
             <div class="card-content">
               <h2>
@@ -120,7 +96,7 @@
         </ion-col>
 
         <ion-col>
-          <div class = "card">
+          <div class = "card" (click)="navigateTo('gallery')">
             <img src="../../assets/img/services/svc19.png" alt="Ventanas">
             <div class="card-content">
               <h2>
@@ -138,7 +114,7 @@
         </ion-col>
 
         <ion-col>
-          <div class = "card">
+          <div class = "card" (click)="navigateTo('gallery')">
             <img src="../../assets/img/services/svc14.png" alt="Puertas">
             <div class="card-content">
               <h2>
@@ -156,7 +132,7 @@
         </ion-col>
 
         <ion-col>
-          <div class = "card">
+          <div class = "card" (click)="navigateTo('gallery')">
             <img src="../../assets/img/services/svc11.png" alt="Puertas">
             <div class="card-content">
               <h2>
@@ -174,65 +150,36 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-
-    <div class="photo-gallery">
-      <div class="column">
-        @for (img of imgList1; track $index) {
-          <div class="photo">
-            <a
-              [href]="'../../assets/img/services/' + img"
-              data-lightbox="models" data-title="'caption' + $index"
-            >
-              <img [src]="'../../assets/img/services/' + img" alt="">
-            </a>
-          </div>
-        }
-      </div>
-
-      <div class="column">
-        @for (img of imgList2; track $index) {
-          <div class="photo">
-            <a
-              [href]="'../../assets/img/services/' + img"
-              data-lightbox="models" data-title="'caption' + $index"
-            >
-              <img [src]="'../../assets/img/services/' + img" alt="">
-            </a>
-          </div>
-        }
-      </div>
-
-      <div class="column">
-        @for (img of imgList3; track $index) {
-          <div class="photo">
-            <a
-              [href]="'../../assets/img/services/' + img"
-              data-lightbox="models" data-title="'caption' + $index"
-            >
-              <img [src]="'../../assets/img/services/' + img" alt="">
-            </a>
-          </div>
-        }
-      </div>
-
-      <div class="column">
-        @for (img of imgList4; track $index) {
-          <div class="photo">
-            <a
-              [href]="'../../assets/img/services/' + img"
-              data-lightbox="models" data-title="'caption' + $index"
-            >
-              <img [src]="'../../assets/img/services/' + img" alt="">
-            </a>
-          </div>
-        }
-      </div>
-    </div>
   </div>
 
-  <div style="background-color: #4185AA; padding: 2rem 0;">
-    <div class="products_title">
-      <h2>¿Cómo puedo cotizar mi pedido?</h2>
+  <div style="background-color: #1f3c4d; height: 660px; display: flex; justify-content: center; align-items: center; margin-bottom: 5rem;">
+    <div style="padding: 1rem 3rem; display: flex; width: 100%; height: 100%;">
+      <div class="slides-info" 
+        style="width: 65%;
+          height: 100%;
+          display: flex;
+          justify-content: end;
+          align-items: center;
+          padding-right: 1rem;"
+      >
+        <img 
+          src="../../assets/img/services/svc11.png"
+          alt="Puertas"
+          style="width: 80%; height: 80%; object-fit: cover; border-radius: 15px;"
+        >
+      </div>
+
+      <div class="info-text" 
+        style="width: 35%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-left: 1rem;"
+      >
+        <div class="products_title" style="text-align: start;">
+          <h2 style="color: white;">¿Cómo puedo cotizar mi pedido?</h2>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -242,7 +189,7 @@
     </div>
   </div>
 
-  <div style="background-color: rgb(251, 255, 0);">
+  <div style="background-color: rgb(141 143 61);">
     <div class="products_title">
       <h2>Preguntas frecuentes</h2>
     </div>
