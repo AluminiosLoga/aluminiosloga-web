@@ -34,7 +34,8 @@
             "styles": [
               "src/global.scss",
               "src/theme/variables.scss",
-               "node_modules/lightbox2/dist/css/lightbox.css"
+               "node_modules/lightbox2/dist/css/lightbox.css",
+               "node_modules/@maptiler/sdk/dist/maptiler-sdk.css"
             ],
             "scripts": ["node_modules/lightbox2/dist/js/lightbox-plus-jquery.js"]
           },
@@ -118,7 +119,8 @@
             "styles": [
               "src/global.scss",
               "src/theme/variables.scss",
-              "node_modules/lightbox2/dist/css/lightbox.css"
+              "node_modules/lightbox2/dist/css/lightbox.css",
+              "node_modules/@maptiler/sdk/dist/maptiler-sdk.css"
             ],
             "scripts": ["node_modules/lightbox2/dist/js/lightbox-plus-jquery.js"]
           },

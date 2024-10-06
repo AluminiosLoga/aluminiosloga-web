@@ -10,6 +10,31 @@ import { ToolbarComponent } from '../components/toolbar/toolbar.component';
 })
 export class HomePage {
   @ViewChild(ToolbarComponent) toolbarComponent!: ToolbarComponent;
+  frequent_questions = [
+    {
+      question: '¿Qué fabricamos?',
+      descriptions: [
+        '¡FABRICAMOS DE TODO!',
+        '',
+        'Fabricamos canceles para baño, vitrinas, ventanas, puertas, repisas, closets, cocinetas personalizadas.',
+        '¡Y mucho más!',
+      ],
+    },
+    {
+      question: '¿Cómo puedo cotizar mi pedido?',
+      descriptions: [
+        '1. Contactanos a travez de: Inbox, Whatsapp, Vía telefónica.',
+        '2. Información de producto: Tipo de producto para cotizar y medidas requeridas.',
+        '3. Ubicación: En caso de necesitar instalación y/o flete, proporciónanos el municipio del que nos escribes para cotizarlo.'
+      ],
+    },
+    {
+      question: '¿Donde estamos ubicados?',
+      descriptions: [
+        'Nos ubicamos en la Av. Manuel Ordoñez 1414, Hacienda de Santa Catarina, 66357 Santa Catarina, N. L.',       
+      ],
+    },
+  ]
 
   constructor(private menu: MenuController, private router: Router) {}
 

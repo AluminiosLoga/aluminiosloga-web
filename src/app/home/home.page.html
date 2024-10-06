@@ -152,51 +152,57 @@
     </ion-grid>
   </div>
 
-  <div style="background-color: #1f3c4d; height: 660px; display: flex; justify-content: center; align-items: center; margin-bottom: 5rem;">
-    <div style="padding: 1rem 3rem; display: flex; width: 100%; height: 100%;">
-      <div class="slides-info" 
-        style="width: 65%;
-          height: 100%;
-          display: flex;
-          justify-content: end;
-          align-items: center;
-          padding-right: 1rem;"
-      >
-        <img 
-          src="../../assets/img/services/svc11.png"
-          alt="Puertas"
-          style="width: 80%; height: 80%; object-fit: cover; border-radius: 15px;"
-        >
+  <div class="section_map_container">
+    <div class="products_title map_title">
+      <h2 style="margin: 0; color: white;">Nosotros te decimos como llegar</h2>
+    </div>
+    <div class="map_container">
+      <app-map></app-map>
+    </div>
+    <div class="footer_map">
+      <div class="map_direction">
+        <ion-text class="text_1" style="color: white;">
+          Manuel Ordoñez 1414, Hacienda de Santa Catarina, 66357 Santa Catarina, N. L.
+        </ion-text>
       </div>
-
-      <div class="info-text" 
-        style="width: 35%;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        padding-left: 1rem;"
-      >
-        <div class="products_title" style="text-align: start;">
-          <h2 style="color: white;">¿Cómo puedo cotizar mi pedido?</h2>
+      
+      <div class="map_phone_container">
+        <div class="phone">
+          <ion-text class="text_1" style="color: white;">81-11-87-55-44</ion-text>
         </div>
       </div>
     </div>
   </div>
 
-  <div style="background-color: rgb(0, 255, 34);">
-    <div class="products_title">
-      <h2>Nosotros te decimos como llegar</h2>
-    </div>
-  </div>
-
-  <div style="background-color: rgb(141 143 61);">
+  <div style="padding: 1rem;">
     <div class="products_title">
       <h2>Preguntas frecuentes</h2>
+    </div>
+
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; width: 100%;">
+      @for(question of frequent_questions; track $index) {
+        <ion-accordion-group style="min-width: 1000px;">
+          <ion-accordion value="first">
+            <ion-item slot="header" color="light">
+              <ion-label>{{question.question}}</ion-label>
+            </ion-item>
+            <div style="padding: 1rem;" slot="content">
+              @for(desc of question.descriptions; track $index) {
+                <div>
+                  <ion-text style="font-size: 1rem;">
+                    {{desc}}
+                  </ion-text>
+                </div>
+              }
+            </div>
+          </ion-accordion>
+        </ion-accordion-group>
+      }
     </div>
   </div>
 
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">
-    <ion-fab-button>
+    <ion-fab-button href="https://wa.me/528111875544" target="_blank">
       <ion-icon name="logo-whatsapp"></ion-icon>
     </ion-fab-button>
   </ion-fab>
@@ -252,3 +258,65 @@
 </div> -->
 
 <!-- Closets, Vitrinas  -->
+
+
+
+
+<!-- style="background-color: #1f3c4d; -->
+
+<!-- <div class="cotizar_container">
+  <div class="products_title" style="text-align: center;">
+    <h2>¿Cómo puedo cotizar mi pedido?</h2>
+  </div>
+  
+  <div class="card-cotizar_container">
+    <div style="display: flex; align-items: center;     height: 100%;
+">
+      <div style="width: 50%; display: flex; align-items: center; justify-content: center;">
+        <h3 style="color: white;">1. Contáctanos a través de:</h3>
+      </div>
+      <div class="card-description" style="display: flex;
+      justify-content: center;
+      align-items: center;width: 50%; background-color: white; padding: 1rem; border-radius: 0 1rem 1rem 0;     height: 100%;">
+        <ul style="color: black;">
+          <li>Inbox</li>
+          <li>Whatsapp</li>
+          <li>Vía telefónica</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-cotizar_container">
+    <div style="display: flex; align-items: center;    height: 100%;
+">
+      <div class="card-description" style=" display: flex;
+      justify-content: center;
+      align-items: center;   height: 100%; width: 50%; background-color: white; padding: 1rem; border-radius: 1rem 0 0 1rem;">
+        <ul style="color: black;">
+          <li>Tipo de producto para cotizar (ventana, puerta, cancel, etc.)</li>
+          <li>Medidas que necesites</li>
+        </ul>
+      </div>
+      <div style="width: 50%; display: flex; align-items: center; justify-content: center;">
+        <h3 style="color: white;">2. Información - Producto:</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-cotizar_container">
+    <div style="display: flex; align-items: center;     height: 100%;
+">
+      <div style="width: 50%; display: flex; align-items: center; justify-content: center;">
+        <h3 style="color: white;">3. Información - Ubicación</h3>
+      </div>
+      <div class="card-description" style="  display: flex;
+      justify-content: center;
+      align-items: center;  height: 100%; width: 50%; background-color: white; padding: 1rem; border-radius: 0 1rem 1rem 0;">
+        <ul style="color: black;">
+          <li>En caso de necesitar instalación y/o flete, proporciónanos el municipio del que nos escribes para cotizarlo.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div> -->
