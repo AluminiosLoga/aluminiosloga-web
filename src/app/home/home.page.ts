@@ -44,18 +44,10 @@ export class HomePage {
     this.router.navigate(['/' + page]);
   }
 
-  // Función para manejar el evento de scroll
-  onScroll(event: any) {
-    const scrollTop = event?.detail?.scrollTop || 0;
-    this.toolbarComponent.updateToolbarOnScroll(scrollTop);
-  }
-
-  // Abre el menú
   openMenu() {
     this.menu.open();
   }
 
-  // Cierra el menú
   closeMenu() {
     this.menu.close();
   }

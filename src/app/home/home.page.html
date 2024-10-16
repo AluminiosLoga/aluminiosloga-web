@@ -1,6 +1,8 @@
-<app-toolbar [startTransparent]="true"></app-toolbar>
+<app-toolbar></app-toolbar>
+<!-- [startTransparent]="true" -->
 
-<ion-content [scrollEvents]="true" (ionScroll)="onScroll($event)" id="main-content">
+<!-- [scrollEvents]="true" (ionScroll)="onScroll($event)" -->
+<ion-content id="main-content">
   <!-- Contenedor con la imagen, overlay oscuro y el contenido centrado -->
   <div class="image-container">
     <ion-img
@@ -175,15 +177,15 @@
   </div>
 
   <div style="padding: 1rem;">
-    <div class="products_title">
-      <h2>Preguntas frecuentes</h2>
+    <div class="products_title" style="margin-bottom: 1rem;">
+      <h2 style="margin: 0;">Preguntas frecuentes</h2>
     </div>
 
     <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; width: 100%;">
       @for(question of frequent_questions; track $index) {
-        <ion-accordion-group style="min-width: 1000px;">
+        <ion-accordion-group style="min-width: 80%;">
           <ion-accordion value="first">
-            <ion-item slot="header" color="light">
+            <ion-item slot="header">
               <ion-label>{{question.question}}</ion-label>
             </ion-item>
             <div style="padding: 1rem;" slot="content">
@@ -196,6 +198,7 @@
               }
             </div>
           </ion-accordion>
+          <hr style="border-top: 1px solid #DE8007; margin: 0.5rem 0;">
         </ion-accordion-group>
       }
     </div>
@@ -208,7 +211,49 @@
   </ion-fab>
 
   <footer>
-    <h2>Contacto</h2>
+    <div class="footer_content">
+      <div class="main_footer_content">
+        <div class="contact_content">
+          <div class="card_contact">
+            <div>
+              <ion-text>
+                Contacto
+              </ion-text>
+            </div>
+
+            <div>
+              <ion-icon name="call-outline"></ion-icon>
+              <ion-text>
+                818059078
+              </ion-text>
+            </div>
+          </div>
+        </div>
+        <div class="our_mission_content">
+          <div>
+            <ion-text>
+              Nuestra mision
+            </ion-text>
+          </div>
+        </div>
+      </div>
+      <div class="secondary_footer_content">
+        <div class="copyright_content">
+          <div>
+            <ion-text>
+              Copyright
+            </ion-text>
+          </div>
+        </div>
+        <div class="social_media_content">
+          <div>
+            <ion-text>
+              Redes
+            </ion-text>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
 </ion-content>
 
