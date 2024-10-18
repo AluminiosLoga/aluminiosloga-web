@@ -1,6 +1,6 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { MenuController } from '@ionic/angular';
+import { IonContent, MenuController } from '@ionic/angular';
 import { ToolbarComponent } from '../components/toolbar/toolbar.component';
 
 @Component({
@@ -10,6 +10,9 @@ import { ToolbarComponent } from '../components/toolbar/toolbar.component';
 })
 export class HomePage {
   @ViewChild(ToolbarComponent) toolbarComponent!: ToolbarComponent;
+  @ViewChild(IonContent) content: IonContent | any;
+  @ViewChild('videoElement') videoElement!: ElementRef;
+
   frequent_questions = [
     {
       question: '¿Qué fabricamos?',
@@ -34,11 +37,66 @@ export class HomePage {
         'Nos ubicamos en la Av. Manuel Ordoñez 1414, Hacienda de Santa Catarina, 66357 Santa Catarina, N. L.',       
       ],
     },
-  ]
+  ];
+  images: string[] = [
+    '../../assets/img/services/svc1.png',
+    '../../assets/img/services/svc2.png',
+    '../../assets/img/services/svc3.png',
+    '../../assets/img/services/svc4.png',
+    '../../assets/img/services/svc5.png',
+    '../../assets/img/services/svc6.png',
+    '../../assets/img/services/svc7.png',
+    '../../assets/img/services/svc8.png',
+    '../../assets/img/services/svc9.png',
+    '../../assets/img/services/svc10.png',
+    '../../assets/img/services/svc11.png',
+    '../../assets/img/services/svc12.png',
+    '../../assets/img/services/svc13.png',
+    '../../assets/img/services/svc14.png',
+    '../../assets/img/services/svc15.png',
+    '../../assets/img/services/svc16.png',
+    '../../assets/img/services/svc17.png',
+    '../../assets/img/services/svc18.png',
+    '../../assets/img/services/svc19.png',
+    '../../assets/img/services/svc20.png',
+    '../../assets/img/services/svc21.png',
+    '../../assets/img/services/svc22.png',
+    '../../assets/img/services/svc23.png',
+  ];
+  currentImage: string = this.images[0];
+  currentIndex: number = 0;
 
   constructor(private menu: MenuController, private router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    // Iniciar la rotación de imágenes cada 20 segundos
+    setInterval(() => {
+      this.changeImage();
+    }, 20000); // 20 segundos
+  }
+
+  ionViewWillEnter() {
+    const video: HTMLVideoElement = this.videoElement.nativeElement;
+    video.volume = 0;  // Set volume to 0 (mute)
+
+    // Enable looping
+    video.loop = true;
+
+    // Play the video after ensuring it is loaded
+    video.play().catch(error => {
+      console.error('Video play failed:', error);
+    });
+  };
+
+  // Función que realiza el scroll suave hacia arriba
+  scrollToTop(): void {
+    this.content.scrollToTop(500); // 500ms para un scroll suave
+  }
+
+  changeImage(): void {
+    this.currentIndex = (this.currentIndex + 1) % this.images.length;
+    this.currentImage = this.images[this.currentIndex];
+  }
 
   navigateTo(page: string) {
     this.router.navigate(['/' + page]);

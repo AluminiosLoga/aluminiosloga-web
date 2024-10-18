@@ -9,6 +9,10 @@ h2 {
   margin: 0;
 }
 
+.margin-bottom { 
+  margin-bottom: 1rem;
+}
+
 .image-container {
   position: relative;
   width: 100%;
@@ -23,6 +27,27 @@ h2 {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Color negro con 50% de opacidad */
   z-index: 1; /* Coloca la capa encima de la imagen */
+}
+
+.home-info-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.main-info {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 1rem;
+  width: 50%;
 }
 
 .image-container ion-img {
@@ -47,14 +72,45 @@ h2 {
 }
 
 .centered-title {
-  font-size: clamp(1.5rem, 6vw, 4rem);
-  margin-bottom: 1rem;
+  // font-size: clamp(1.5rem, 6vw, 5rem);
+  font-size: 4rem;
+  color: white;
 }
 
 .centered-description {
-  font-size: clamp(1rem, 3vw, 2rem);
-  margin-bottom: 1.5rem;
-  max-width: 650px;
+  font-size: 1.4rem;
+  max-width: 95%;
+  color: white;
+}
+
+.image-home-container {
+  justify-content: start;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  padding-left: 1rem;
+}
+
+.image-home-container ion-img {
+  width: 80%;
+  height: 70%;
+}
+
+.image-home-container ion-img {
+  animation: fadeEffect 1.5s ease-in-out;
+}
+
+@keyframes fadeEffect {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 ion-text {

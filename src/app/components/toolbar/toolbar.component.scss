@@ -6,12 +6,12 @@
 }
 
 .main-ion-toolbar {
-    --background: transparent;
-    padding-inline: 3rem;
-    height: 80px;
-    display: flex;
-    position: absolute;
-  }
+  --background: transparent;
+  padding-inline: 12rem;
+  height: 100px;
+  display: flex;
+  position: absolute;
+}
 
   /* Oculta el icono de menú hamburguesa en pantallas grandes */
 .mobile-menu-icon {

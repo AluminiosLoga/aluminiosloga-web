@@ -1,14 +1,14 @@
 <ion-header>
   <ion-toolbar class="main-ion-toolbar white-toolbar" id="toolbar">
     <div 
-      style="width: fit-content; 
+      style="width: fit-content;
         margin: 0.5rem 0;
         display: flex;
         justify-content: center;
         align-items: center;"
     >
       <ion-icon *ngIf="backButton" style="margin-right: .5rem; font-size: 1.8rem;" name="arrow-back" (click)="navigateTo('home')"></ion-icon>
-      <ion-img src="../../assets/icon/logo.png" style="width: 90px;"></ion-img>
+      <ion-img src="../../assets/icon/logo.png" (click)="onLogoClick()" style="width: 90px; cursor: pointer;"></ion-img>
     </div>
 
     <!-- Botones visibles en pantallas grandes -->
