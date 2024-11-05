@@ -66,6 +66,24 @@ export class HomePage {
   currentImage: string = this.images[0];
   currentIndex: number = 0;
 
+  branches = [
+    {
+      image: '../../assets/img/sucursales/sucursal1.jpeg',
+      address: 'Lic Manuel Ordoñez 1414, Hacienda de Santa Catarina, 66357 Cdad. Santa Catarina, N.L.',
+      url: 'https://maps.app.goo.gl/LFdzK1Rokn28iJiq8'
+    },
+    {
+      image: '../../assets/img/sucursales/sucursal2.jpeg',
+      address: 'Sierra Soledad 200, Sierra Real, 66004 García, N.L.',
+      url: 'https://maps.app.goo.gl/sB3KsBWRoVQoguZg7'
+    },
+    {
+      image: '../../assets/img/sucursales/sucursal3.jpeg',
+      address: 'Lic Manuel Ordoñez 1414, Hacienda de Santa Catarina, 66357 Cdad. Santa Catarina, N.L.',
+      url: 'https://maps.app.goo.gl/LFdzK1Rokn28iJiq8'
+    }
+  ];
+
   constructor(private menu: MenuController, private router: Router) {}
 
   ngOnInit() {
@@ -109,4 +127,8 @@ export class HomePage {
   closeMenu() {
     this.menu.close();
   }
+
+  openMap(url: string) {
+    window.open(url, '_blank');
+  }  
 }

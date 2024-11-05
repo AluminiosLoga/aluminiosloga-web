@@ -8,12 +8,11 @@
       style="width: 100%; object-fit: cover; height: 100%;"
     ></ion-img>
 
-    <!-- Capa oscura superpuesta -->
     <div class="image-overlay"></div>
 
     <div class="home-info-section">
       <div class="main-info">
-        <div style="width: 65%;">
+        <div style="width: 80%;">
           <h2 class="centered-title">Aluminio y vidrio</h2>
           <h2 class="centered-title margin-bottom" style="font-size: 2.5rem;">Cuidando tus espacios</h2>
           <h2 class="centered-description margin-bottom" style="font-weight: 300;">
@@ -28,25 +27,29 @@
     </div>
   </div>
 
-  <div class="about_us_container" style="height: fit-content; width: 100%; display: flex; justify-content: center; align-items: center;">
-    <section class="about_us_section" style="width: 50%;">
-      <div class="" style="display: flex; justify-content: center; align-items: center;">
-        <div class="">
-          <h1 class="margin-bottom" style="font-size: 3rem;">Sobre nosotros</h1>
-          <div class="margin-bottom" style="width: 85%;">
-            <ion-text style="font-size: 1rem; font-weight: 300;">
-              En Loga, somos una empresa dedicada a la fabricación e instalación de productos de aluminio y vidrio con más de 35 años de experiencia en el sector.
-            </ion-text>
-          </div>
-          <div style="width: 85%;">
-            <ion-text style="font-size: 1rem; font-weight: 300;">
-              Nos especializamos en ofrecer soluciones personalizadas de alta calidad para nuestros clientes, combinando innovación, precisión y durabilidad en cada proyecto.
-            </ion-text>
+  <div class="about_us_container" style="height: fit-content; width: 100%; display: flex; justify-content: center; align-items: center; position: relative;">
+    <!-- <img src="../../assets/img/separador.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.2; z-index: 1;"> -->
+  
+    <section class="about_us_section" style="width: 50%; position: relative; z-index: 2;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <div style="position: relative;">
+          <div style="position: relative;">
+            <h2 class="margin-bottom" style="font-size: 3rem; font-weight: 500;">Sobre nosotros</h2>
+            <div class="margin-bottom" style="width: 85%;">
+              <ion-text style="font-size: 1rem; font-weight: 300;">
+                En Loga, somos una empresa dedicada a la fabricación e instalación de productos de aluminio y vidrio con más de 35 años de experiencia en el sector.
+              </ion-text>
+            </div>
+            <div style="width: 85%;">
+              <ion-text style="font-size: 1rem; font-weight: 300;">
+                Nos especializamos en ofrecer soluciones personalizadas de alta calidad para nuestros clientes, combinando innovación, precisión y durabilidad en cada proyecto.
+              </ion-text>
+            </div>
           </div>
         </div>
         <div>
           <div>
-            <video #videoElement width="300" height="720" muted="muted" controls>
+            <video #videoElement width="300" height="720" muted="muted">
               <source src="../../assets/videos/ourhistory.mp4" type="video/mp4">
             </video>
           </div>
@@ -54,118 +57,66 @@
       </div>
     </section>
   </div>
+  
 
   <div class="products_container">
     <div class="products_title">
-      <h2>¡CONOCE NUESTROS SERVICIOS!</h2>
+      <h2 style="font-size: 3rem; font-weight: 500; color: white;">Productos y servicios</h2>
     </div>
 
-    <ion-grid class="our_services">
+    <ion-grid class="our_services margin-bottom">
       <ion-row>
         <ion-col>
           <div class = "card" (click)="navigateTo('gallery')">
-            <img src="../../assets/img/services/svc22.png" alt="Canceles para baño">
-            <div class="card-content">
-              <h2>
-                Canceles para baño
-              </h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.
-              </p>
-              <a class="button">
-                Ver mas
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </a>
+            <div class="card-image">
+              <img src="../../assets/img/services/svc22.png">
+            </div>
+            <div class="card-title-image">
+              <ion-text>Canceles para baño</ion-text>
             </div>
           </div>
         </ion-col>
 
         <ion-col>
           <div class = "card" (click)="navigateTo('gallery')">
-            <img src="../../assets/img/services/svc21.png" alt="Repisas">
-            <div class="card-content">
-              <h2>
-                Repisas
-              </h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.
-              </p>
-              <a href="#" class="button">
-                Ver mas
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </a>
+            <div class="card-image">
+              <img src="../../assets/img/services/svc21.png">
+            </div>
+            <div class="card-title-image">
+              <ion-text>Repisas</ion-text>
             </div>
           </div>
         </ion-col>
 
         <ion-col>
           <div class = "card" (click)="navigateTo('gallery')">
-            <img src="../../assets/img/services/svc13.png" alt="Cocinetas">
-            <div class="card-content">
-              <h2>
-                Cocinetas
-              </h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.
-              </p>
-              <a href="#" class="button">
-                Ver mas
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </a>
+            <div class="card-image">
+              <img src="../../assets/img/services/svc13.png">
+            </div>
+            <div class="card-title-image">
+              <ion-text>Cocinetas</ion-text>
             </div>
           </div>
         </ion-col>
 
         <ion-col>
           <div class = "card" (click)="navigateTo('gallery')">
-            <img src="../../assets/img/services/svc19.png" alt="Ventanas">
-            <div class="card-content">
-              <h2>
-                Ventanas
-              </h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.
-              </p>
-              <a href="#" class="button">
-                Ver mas
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </a>
+            <div class="card-image">
+              <img src="../../assets/img/services/svc19.png">
+            </div>
+            <div class="card-title-image">
+              <ion-text>Ventanas</ion-text>
             </div>
           </div>
         </ion-col>
 
         <ion-col>
           <div class = "card" (click)="navigateTo('gallery')">
-            <img src="../../assets/img/services/svc14.png" alt="Puertas">
-            <div class="card-content">
-              <h2>
-                Puertas
-              </h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.
-              </p>
-              <a href="#" class="button">
-                Ver mas
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </a>
+            <div class="card-image">
+              <img src="../../assets/img/services/svc14.png">
             </div>
-          </div>
-        </ion-col>
-
-        <ion-col>
-          <div class = "card" (click)="navigateTo('gallery')">
-            <img src="../../assets/img/services/svc11.png" alt="Puertas">
-            <div class="card-content">
-              <h2>
-                ¡Y mucho más!
-              </h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.
-              </p>
-              <a href="#" class="button">
-                Ver mas
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </a>
+            <div class="card-title-image">
+              <ion-text>Puertas</ion-text>
             </div>
           </div>
         </ion-col>
@@ -173,7 +124,37 @@
     </ion-grid>
   </div>
 
-  <div class="section_map_container">
+  <div style="padding: 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <div class="products_title">
+      <h2 style="font-size: 3rem; font-weight: 500; margin-top: 1rem;">Encuentra tu Sucursal</h2>
+    </div>
+
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; width: 50%;">
+      <ion-grid style="width: 100%;">
+        @for(branch of branches; track $index) {
+          <ion-row style="width: 100%;" class="margin-bottom">
+            <ion-col style="display: flex; justify-content: center; align-items: center; width: 100%;">
+              <div style="width: 30%;">
+                <ion-img [src]="branch.image" (click)="openMap(branch.url)"  style="cursor: pointer; width: 100%; object-fit: cover;"></ion-img>
+              </div>
+              <div class="branch-info" style="width: 70%; padding-left: 2rem;">
+                <div class="address">
+                  <ion-text class="branch-address">{{ branch.address }}</ion-text>
+                </div>
+                <div class="btn goAddress">
+                  <a (click)="openMap(branch.url)" style="cursor: pointer;">
+                    Ver en Google Maps
+                  </a>
+                </div>
+              </div>
+            </ion-col>
+          </ion-row>
+        }
+      </ion-grid>
+    </div>
+  </div>
+
+  <!-- <div class="section_map_container">
     <div class="products_title map_title">
       <h2 style="margin: 0; color: white;">Nosotros te decimos como llegar</h2>
     </div>
@@ -195,12 +176,14 @@
     </div>
   </div>
 
-  <div style="padding: 1rem;">
-    <div class="products_title" style="margin-bottom: 1rem;">
-      <h2 style="margin: 0;">Preguntas frecuentes</h2>
+  <img src="" alt=""> -->
+
+  <div style="padding: 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <div class="products_title">
+      <h2 style="font-size: 3rem; font-weight: 500; margin-top: 1rem;">Preguntas frecuentes</h2>
     </div>
 
-    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; width: 100%;">
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; width: 70%;">
       @for(question of frequent_questions; track $index) {
         <ion-accordion-group style="min-width: 80%;">
           <ion-accordion value="first">
@@ -234,29 +217,41 @@
       <div class="main_footer_content">
         <div class="contact_content">
           <div class="card_contact">
-            <div>
+            <div class="margin-bottom">
               <ion-text>
                 Contacto
               </ion-text>
             </div>
 
-            <div>
-              <ion-icon name="call-outline"></ion-icon>
+            <div style="display: flex; align-items: center;" class="margin-bottom">
+              <ion-text>
+                Sobre nosotros
+              </ion-text>
+            </div>
+
+            <div style="display: flex; align-items: center;" class="margin-bottom">
+              <ion-text>
+                Servicios
+              </ion-text>
+            </div>
+
+            <div style="display: flex; align-items: center;">
+              <ion-icon name="call" style="padding-right: 0.3rem;"></ion-icon>
               <ion-text>
                 818059078
               </ion-text>
             </div>
           </div>
         </div>
-        <div class="our_mission_content">
+        <!-- <div class="our_mission_content">
           <div>
             <ion-text>
               Nuestra mision
             </ion-text>
           </div>
-        </div>
+        </div> -->
       </div>
-      <div class="secondary_footer_content">
+      <!-- <div class="secondary_footer_content">
         <div class="copyright_content">
           <div>
             <ion-text>
@@ -271,7 +266,7 @@
             </ion-text>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </footer>
 </ion-content>
@@ -307,80 +302,3 @@
     </ion-list>
   </ion-content>
 </ion-menu>
-<!-- <div class="ion-page" id="main-content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-      <ion-buttons slot="end">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content class="ion-padding">
-    Tap the button in the toolbar to open the menu.
-  </ion-content>
-</div> -->
-
-<!-- Closets, Vitrinas  -->
-
-
-
-
-<!-- style="background-color: #1f3c4d; -->
-
-<!-- <div class="cotizar_container">
-  <div class="products_title" style="text-align: center;">
-    <h2>¿Cómo puedo cotizar mi pedido?</h2>
-  </div>
-  
-  <div class="card-cotizar_container">
-    <div style="display: flex; align-items: center;     height: 100%;
-">
-      <div style="width: 50%; display: flex; align-items: center; justify-content: center;">
-        <h3 style="color: white;">1. Contáctanos a través de:</h3>
-      </div>
-      <div class="card-description" style="display: flex;
-      justify-content: center;
-      align-items: center;width: 50%; background-color: white; padding: 1rem; border-radius: 0 1rem 1rem 0;     height: 100%;">
-        <ul style="color: black;">
-          <li>Inbox</li>
-          <li>Whatsapp</li>
-          <li>Vía telefónica</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="card-cotizar_container">
-    <div style="display: flex; align-items: center;    height: 100%;
-">
-      <div class="card-description" style=" display: flex;
-      justify-content: center;
-      align-items: center;   height: 100%; width: 50%; background-color: white; padding: 1rem; border-radius: 1rem 0 0 1rem;">
-        <ul style="color: black;">
-          <li>Tipo de producto para cotizar (ventana, puerta, cancel, etc.)</li>
-          <li>Medidas que necesites</li>
-        </ul>
-      </div>
-      <div style="width: 50%; display: flex; align-items: center; justify-content: center;">
-        <h3 style="color: white;">2. Información - Producto:</h3>
-      </div>
-    </div>
-  </div>
-
-  <div class="card-cotizar_container">
-    <div style="display: flex; align-items: center;     height: 100%;
-">
-      <div style="width: 50%; display: flex; align-items: center; justify-content: center;">
-        <h3 style="color: white;">3. Información - Ubicación</h3>
-      </div>
-      <div class="card-description" style="  display: flex;
-      justify-content: center;
-      align-items: center;  height: 100%; width: 50%; background-color: white; padding: 1rem; border-radius: 0 1rem 1rem 0;">
-        <ul style="color: black;">
-          <li>En caso de necesitar instalación y/o flete, proporciónanos el municipio del que nos escribes para cotizarlo.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div> -->
