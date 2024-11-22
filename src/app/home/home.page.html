@@ -1,7 +1,8 @@
-<app-toolbar (logoClicked)="scrollToTop()"></app-toolbar>
+<app-toolbar (logoClicked)="scrollToTop()"
+  (scrollToSection)="scrollToSection($event)"></app-toolbar>
 
 <ion-content id="main-content">
-  <div class="home-section" style="width: 100%; height: 100%; position: relative;">
+  <div class="home-section" id="home-section" style="width: 100%; height: 100%; position: relative;">
     <ion-img
       id="slideshow"
       src="../../assets/img/pic-1.png"
@@ -12,9 +13,9 @@
 
     <div class="home-info-section">
       <div class="main-info">
-        <div style="width: 80%;">
+        <div class="main-info-container">
           <h2 class="centered-title">Aluminio y vidrio</h2>
-          <h2 class="centered-title margin-bottom" style="font-size: 2.5rem;">Cuidando tus espacios</h2>
+          <h2 class="centered-title margin-bottom" style="font-size: clamp(1.5rem, 6vw, 2.5rem);;">Cuidando tus espacios</h2>
           <h2 class="centered-description margin-bottom" style="font-weight: 300;">
             Contamos con servicio a domicilio en toda el Área Metropolitana de Monterrey.
           </h2>
@@ -27,7 +28,7 @@
     </div>
   </div>
 
-  <div class="about_us_container" style="height: fit-content; width: 100%; display: flex; justify-content: center; align-items: center; position: relative;">
+  <div class="about_us_container" id="about_us" style="height: fit-content; width: 100%; display: flex; justify-content: center; align-items: center; position: relative;">
     <!-- <img src="../../assets/img/separador.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.2; z-index: 1;"> -->
   
     <section class="about_us_section" style="width: 50%; position: relative; z-index: 2;">
@@ -59,9 +60,9 @@
   </div>
   
 
-  <div class="products_container">
+  <div class="products_container" id="services-section">
     <div class="products_title">
-      <h2 style="font-size: 3rem; font-weight: 500; color: white;">Productos y servicios</h2>
+      <h2 style="font-size: 3rem; font-weight: 500; color: white;">Servicios</h2>
     </div>
 
     <ion-grid class="our_services margin-bottom">
@@ -124,7 +125,7 @@
     </ion-grid>
   </div>
 
-  <div style="padding: 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+  <div style="padding: 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center;" id="sucursales-section">
     <div class="products_title">
       <h2 style="font-size: 3rem; font-weight: 500; margin-top: 1rem;">Encuentra tu Sucursal</h2>
     </div>
@@ -143,7 +144,8 @@
                 </div>
                 <div class="btn goAddress">
                   <a (click)="openMap(branch.url)" style="cursor: pointer;">
-                    Ver en Google Maps
+                    Ver en Google Maps 
+                    <ion-icon name="open-outline"></ion-icon>
                   </a>
                 </div>
               </div>
@@ -178,7 +180,7 @@
 
   <img src="" alt=""> -->
 
-  <div style="padding: 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+  <div id="frequent-questions-section" style="padding: 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
     <div class="products_title">
       <h2 style="font-size: 3rem; font-weight: 500; margin-top: 1rem;">Preguntas frecuentes</h2>
     </div>
@@ -200,7 +202,7 @@
               }
             </div>
           </ion-accordion>
-          <hr style="border-top: 1px solid #DE8007; margin: 0.5rem 0;">
+          <hr style="border-top: 1px solid #931F36; margin: 0.5rem 0;">
         </ion-accordion-group>
       }
     </div>
@@ -212,34 +214,52 @@
     </ion-fab-button>
   </ion-fab>
 
-  <footer>
+  <footer id="footer-section">
     <div class="footer_content">
       <div class="main_footer_content">
         <div class="contact_content">
           <div class="card_contact">
             <div class="margin-bottom">
-              <ion-text>
+              <ion-text style="font-size: 1.3rem; font-weight: 600;">
                 Contacto
               </ion-text>
             </div>
 
             <div style="display: flex; align-items: center;" class="margin-bottom">
-              <ion-text>
+              <ion-text (click)="scrollToSection('home-section')" style="cursor: pointer;">
+                Inicio
+              </ion-text>
+            </div>
+
+            <div style="display: flex; align-items: center;" class="margin-bottom">
+              <ion-text (click)="scrollToSection('about_us')" style="cursor: pointer;">
                 Sobre nosotros
               </ion-text>
             </div>
 
             <div style="display: flex; align-items: center;" class="margin-bottom">
-              <ion-text>
+              <ion-text (click)="scrollToSection('services-section')" style="cursor: pointer;">
                 Servicios
+              </ion-text>
+            </div>
+
+            <div style="display: flex; align-items: center;" class="margin-bottom">
+              <ion-text (click)="scrollToSection('sucursales-section')" style="cursor: pointer;">
+                Sucursales
+              </ion-text>
+            </div>
+
+            <div style="display: flex; align-items: center;" class="margin-bottom">
+              <ion-text (click)="scrollToSection('frequent-questions-section')" style="cursor: pointer;">
+                Preguntas frecuentes
               </ion-text>
             </div>
 
             <div style="display: flex; align-items: center;">
               <ion-icon name="call" style="padding-right: 0.3rem;"></ion-icon>
-              <ion-text>
+              <a href="https://wa.me/528111875544" style="text-decoration: none; color: white; font-weight: 300;">
                 818059078
-              </ion-text>
+              </a>
             </div>
           </div>
         </div>

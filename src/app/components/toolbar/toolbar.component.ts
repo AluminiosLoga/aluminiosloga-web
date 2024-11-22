@@ -7,8 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./toolbar.component.scss'],
 })
 export class ToolbarComponent  implements OnInit {
+  @Output() scrollToSection = new EventEmitter<string>();
   @Output() logoClicked: EventEmitter<void> = new EventEmitter();
   @Input() backButton: boolean = false;
+
+  activeSection: string = 'home-section';
 
   constructor(private router: Router) {}
 
@@ -21,5 +24,10 @@ export class ToolbarComponent  implements OnInit {
 
   navigateTo(page: string) {
     this.router.navigate(['/' + page]);
+  }
+
+  onButtonClick(sectionId: string) {
+    this.activeSection = sectionId;
+    this.scrollToSection.emit(sectionId);
   }
 }

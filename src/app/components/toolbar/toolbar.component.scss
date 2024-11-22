@@ -7,10 +7,13 @@
 
 .main-ion-toolbar {
   --background: transparent;
-  padding-inline: 12rem;
+  padding-inline: 6rem;
   height: 100px;
   display: flex;
-  position: absolute;
+}
+
+.tab {
+  margin-inline-end: 0.5rem;
 }
 
   /* Oculta el icono de menú hamburguesa en pantallas grandes */

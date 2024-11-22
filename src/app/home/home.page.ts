@@ -130,5 +130,12 @@ export class HomePage {
 
   openMap(url: string) {
     window.open(url, '_blank');
-  }  
+  }
+
+  scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }

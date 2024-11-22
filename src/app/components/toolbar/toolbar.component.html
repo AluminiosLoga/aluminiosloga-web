@@ -13,9 +13,22 @@
 
     <!-- Botones visibles en pantallas grandes -->
     <ion-buttons slot="end" class="desktop-menu">
-      <ion-button class="tab" style="color: #144DFD;"> Inicio </ion-button>
-      <ion-button class="tab"> Productos </ion-button>
-      <ion-button class="tab"> Contacto </ion-button>
+      <ion-button
+        class="tab"
+        [style.color]="activeSection === 'home-section' ? '#144DFD' : '#000'" 
+        (click)="onButtonClick('home-section')"> Inicio </ion-button>
+      <ion-button class="tab"
+      [style.color]="activeSection === 'about_us' ? '#144DFD' : '#000'"
+       (click)="onButtonClick('about_us')"> Sobre nosotros </ion-button>
+      <ion-button class="tab"
+        [style.color]="activeSection === 'services-section' ? '#144DFD' : '#000'"
+        (click)="onButtonClick('services-section')"> Servicios </ion-button>
+      <ion-button class="tab"
+        [style.color]="activeSection === 'sucursales-section' ? '#144DFD' : '#000'"
+        (click)="onButtonClick('sucursales-section')"> Sucursales </ion-button>
+      <ion-button class="tab"
+        [style.color]="activeSection === 'footer-section' ? '#144DFD' : '#000'"
+        (click)="onButtonClick('footer-section')"> Contacto </ion-button>
     </ion-buttons>
 
     <!-- Icono de menú hamburguesa visible en pantallas pequeñas -->
