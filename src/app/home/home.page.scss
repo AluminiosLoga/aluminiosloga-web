@@ -262,11 +262,20 @@ ul {
   max-width: 35%;
 }
 
+ion-accordion {
+  background: black;
+}
+
+.ion-accordion-toggle-icon {
+  color: white;
+}
+
 ion-item {
-  --background: transparent;
-  --border-radius: 4px;
-  --detail-icon-color: white;
+  --background: black;
+  // --border-radius: 4px;
+  // --detail-icon-color: white;
   --min-height: 4rem;
+  color: white;
   margin: 0.5rem;
 }
 
@@ -287,6 +296,14 @@ footer {
   color: white;
   height: fit-content;
   padding: 2rem;
+}
+
+.contact_content {
+  display: flex;
+}
+
+.card_contact {
+  margin-right: 2rem;
 }
 
 .footer_contact_option {

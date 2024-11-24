@@ -180,7 +180,7 @@
 
   <img src="" alt=""> -->
 
-  <div id="frequent-questions-section" style="padding: 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+  <!-- <div id="frequent-questions-section" style="padding: 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
     <div class="products_title">
       <h2 style="font-size: 3rem; font-weight: 500; margin-top: 1rem;">Preguntas frecuentes</h2>
     </div>
@@ -206,7 +206,7 @@
         </ion-accordion-group>
       }
     </div>
-  </div>
+  </div> -->
 
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">
     <ion-fab-button href="https://wa.me/528111875544" target="_blank">
@@ -242,7 +242,7 @@
                 Servicios
               </a>
             </div>
-<!-- 
+            <!-- 
             <div style="display: flex; align-items: center;" class="margin-bottom">
               <ion-text (click)="scrollToSection('sucursales-section')" style="cursor: pointer;">
                 Sucursales
@@ -260,6 +260,41 @@
               <a class="footer_option_redirect" href="https://wa.me/528111875544">
                 Contacto
               </a>
+            </div>
+          </div>
+
+          <div class="card_contact" style="width: 60%;">
+            <div class="margin-bottom">
+              <ion-text style="font-size: 1.3rem; font-weight: 600; color: #C9BE2C;">
+                Preguntas frequentes
+              </ion-text>
+            </div>
+
+            <div style="display: flex; flex-direction: column; padding-left: 0.2rem;">
+              @for(question of frequent_questions; track $index) {
+                <ion-accordion-group>
+                  <ion-accordion value="first">
+                    <ion-item slot="header">
+                      <ion-label>{{question.question}}</ion-label>
+                      <ion-icon
+                      class="ion-accordion-toggle-icon custom-icon"
+                      name="chevron-down-outline"
+                      slot="end">
+                    </ion-icon>
+                    </ion-item>
+                    <div style="padding: 1rem;" slot="content">
+                      @for(desc of question.descriptions; track $index) {
+                        <div>
+                          <ion-text style="font-size: 1rem;">
+                            {{desc}}
+                          </ion-text>
+                        </div>
+                      }
+                    </div>
+                  </ion-accordion>
+                  <!-- <hr style="border-top: 1px solid #931F36; margin: 0.5rem 0;"> -->
+                </ion-accordion-group>
+              }
             </div>
           </div>
         </div>
