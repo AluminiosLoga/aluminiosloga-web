@@ -289,6 +289,17 @@ footer {
   padding: 2rem;
 }
 
+.footer_contact_option {
+  padding-left: 0.2rem;
+}
+
+.footer_option_redirect {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  border-bottom: 2px solid white;
+}
+
 .anim {
   opacity: 0;
   transform: translateY(30px);

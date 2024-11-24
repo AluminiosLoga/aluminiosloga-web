@@ -220,29 +220,29 @@
         <div class="contact_content">
           <div class="card_contact">
             <div class="margin-bottom">
-              <ion-text style="font-size: 1.3rem; font-weight: 600;">
+              <ion-text style="font-size: 1.3rem; font-weight: 600; color: #C9BE2C;">
                 Contacto
               </ion-text>
             </div>
 
-            <div style="display: flex; align-items: center;" class="margin-bottom">
-              <ion-text (click)="scrollToSection('home-section')" style="cursor: pointer;">
+            <div style="display: flex; align-items: center;" class="footer_contact_option margin-bottom">
+              <a class="footer_option_redirect" (click)="scrollToSection('home-section')">
                 Inicio
-              </ion-text>
+              </a>
             </div>
 
-            <div style="display: flex; align-items: center;" class="margin-bottom">
+            <!-- <div style="display: flex; align-items: center;" class="margin-bottom">
               <ion-text (click)="scrollToSection('about_us')" style="cursor: pointer;">
                 Sobre nosotros
               </ion-text>
-            </div>
+            </div> -->
 
-            <div style="display: flex; align-items: center;" class="margin-bottom">
-              <ion-text (click)="scrollToSection('services-section')" style="cursor: pointer;">
+            <div style="display: flex; align-items: center;" class="footer_contact_option margin-bottom">
+              <a class="footer_option_redirect" (click)="scrollToSection('services-section')">
                 Servicios
-              </ion-text>
+              </a>
             </div>
-
+<!-- 
             <div style="display: flex; align-items: center;" class="margin-bottom">
               <ion-text (click)="scrollToSection('sucursales-section')" style="cursor: pointer;">
                 Sucursales
@@ -253,12 +253,12 @@
               <ion-text (click)="scrollToSection('frequent-questions-section')" style="cursor: pointer;">
                 Preguntas frecuentes
               </ion-text>
-            </div>
+            </div> -->
 
-            <div style="display: flex; align-items: center;">
-              <ion-icon name="call" style="padding-right: 0.3rem;"></ion-icon>
-              <a href="https://wa.me/528111875544" style="text-decoration: none; color: white; font-weight: 300;">
-                818059078
+            <div style="display: flex; align-items: center;" class="footer_contact_option">
+              <!-- <ion-icon name="call" style="padding-right: 0.3rem; color: #C9BE2C;"></ion-icon> -->
+              <a class="footer_option_redirect" href="https://wa.me/528111875544">
+                Contacto
               </a>
             </div>
           </div>
