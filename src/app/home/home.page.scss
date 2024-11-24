@@ -279,6 +279,10 @@ ion-item {
   margin: 0.5rem;
 }
 
+ion-item:hover {
+  --color: white; /* Color del texto en hover */
+}
+
 ion-fab {
   margin: 1rem 2rem 1rem 1rem;
 }
