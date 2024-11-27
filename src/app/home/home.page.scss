@@ -210,6 +210,22 @@ ion-button {
   }
 }
 
+.sucursales_section {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sucursales_container {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+}
+
 .branch-address {
   font-weight: 500;
 }
@@ -348,6 +364,14 @@ footer {
     display: none;
   }
 
+  .about_us_section {
+    margin: 1rem 0;
+  
+    video {
+      display: none;
+    }
+  }
+
   // /* Oculta los botones del menú en pantallas pequeñas */
   // .desktop-menu {
   //   display: none;
@@ -368,6 +392,42 @@ footer {
 
   .main-info-container {
     width: 100%;
+  }
+
+  .our_services {
+    width: 100%;
+
+    .card {
+      width: 10rem;
+      height: fit-content;
+    }
+
+    .card-image {
+      height: 10rem;
+      width: 10rem;
+    }
+
+    .card-title-image {
+      height: 4.5rem;
+      color: white;
+      padding: 0.5rem 0;
+    
+      ion-text {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .sucursales_container {
+    width: 100%;
+  }
+
+  footer {
+    padding: 1rem;
+  }
+
+  ion-fab {
+    margin: 0;
   }
 }
 

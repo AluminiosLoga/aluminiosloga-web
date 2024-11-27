@@ -125,12 +125,12 @@
     </ion-grid>
   </div>
 
-  <div style="padding: 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center;" id="sucursales-section">
+  <div class="sucursales_section" id="sucursales-section">
     <div class="products_title">
       <h2 style="font-size: 3rem; font-weight: 500; margin-top: 1rem;">Encuentra tu Sucursal</h2>
     </div>
 
-    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; width: 50%;">
+    <div class="sucursales_container">
       <ion-grid style="width: 100%;">
         @for(branch of branches; track $index) {
           <ion-row style="width: 100%;" class="margin-bottom">
