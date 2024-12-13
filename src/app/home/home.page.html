@@ -5,7 +5,7 @@
   <div class="home-section" id="home-section" style="width: 100%; height: 100%; position: relative;">
     <ion-img
       id="slideshow"
-      src="../../assets/img/pic-1.png"
+      src="../../assets/img/banner.png"
       style="width: 100%; object-fit: cover; height: 100%;"
     ></ion-img>
 
@@ -15,22 +15,34 @@
       <div class="main-info">
         <div class="main-info-container">
           <h2 class="centered-title">Aluminio y vidrio</h2>
-          <h2 class="centered-title margin-bottom" style="font-size: clamp(1.5rem, 6vw, 2.5rem);;">Cuidando tus espacios</h2>
-          <h2 class="centered-description margin-bottom" style="font-weight: 300;">
+          <h2 class="centered-subtitle margin-bottom">Cuidando tus espacios</h2>
+          <h2 class="centered-description margin-bottom">
             Contamos con servicio a domicilio en toda el Área Metropolitana de Monterrey.
           </h2>
-          <ion-button>Contactar</ion-button>
+          <ion-button color="primary">Ponte en contacto</ion-button>
         </div>
       </div>
-      <div class="image-home-container">
+      <!-- <div class="image-home-container">
         <ion-img [src]="currentImage"></ion-img>
-      </div>
+      </div> -->
     </div>
   </div>
 
-  <div class="about_us_container" id="about_us" style="height: fit-content; width: 100%; display: flex; justify-content: center; align-items: center; position: relative;">
-    <!-- <img src="../../assets/img/separador.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.2; z-index: 1;"> -->
-  
+  <div class="about_us_container" id="about_us">
+    <ion-img
+      id="slideshow"
+      src="../../assets/img/about_us/img_about_us_section.png"
+      style="width: 100%; object-fit: cover; height: 100%;"
+    ></ion-img>
+
+    <div class="image-overlay-about_us"></div>
+
+    <div class="about_us_block">
+      <h2 class="sub-title">Sobre nosotros</h2>
+    </div>
+  </div>
+
+  <!-- <div class="about_us_container" id="about_us" style="height: fit-content; width: 100%; display: flex; justify-content: center; align-items: center; position: relative;">  
     <section class="about_us_section" style="width: 50%; position: relative; z-index: 2;">
       <div style="display: flex; justify-content: center; align-items: center;">
         <div style="position: relative;">
@@ -57,7 +69,7 @@
         </div>
       </div>
     </section>
-  </div>
+  </div> -->
   
 
   <div class="products_container" id="services-section">

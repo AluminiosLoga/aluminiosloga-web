@@ -13,6 +13,14 @@ h2 {
   margin-bottom: 1rem;
 }
 
+.sub-title {
+  font-size: 2.5rem;
+  color: var(--ion-color-primary);
+  font-weight: 700;
+  line-height: 3rem;
+  letter-spacing: -0.5px;
+}
+
 .image-container {
   position: relative;
   width: 100%;
@@ -31,7 +39,7 @@ h2 {
 
 .home-info-section {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -44,9 +52,9 @@ h2 {
 
 .main-info {
   display: flex;
-  justify-content: end;
+  // justify-content: end;
   align-items: center;
-  width: 50%;
+  // width: 50%;
 }
 
 .image-container ion-img {
@@ -71,19 +79,28 @@ h2 {
 }
 
 .centered-title {
-  font-size: clamp(1.5rem, 6vw, 4rem);
-  // font-size: 4rem;
+  // font-size: clamp(1.5rem, 6vw, 4rem);
+  font-size: 4.5rem;
   color: white;
+  font-weight: 700;
+}
+
+.centered-subtitle {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 700;
 }
 
 .main-info-container {
   width: 80%;
+  margin-left: 5rem;
 }
 
 .centered-description {
-  font-size: clamp(1rem, 4vw, 1.4rem);
-  max-width: 100%;
+  font-size: 1.25rem;
+  max-width: 70%;
   color: white;
+  font-weight: 300;
 }
 
 .image-home-container {
@@ -125,12 +142,13 @@ ion-text {
 }
 
 ion-button {
-  --background: #144DFD; /* Fondo custom color */
+  // --background: #144DFD; /* Fondo custom color */
   --color: #ffffff; /* Texto blanco */
-  --padding-bottom: 1.1rem;
-  --padding-top: 1.1rem;
-  --padding-start: 1.5rem;
-  --padding-end: 1.5rem;
+  gap: 0.5rem;
+  border-radius: 4px;
+  text-transform: none;
+  width: 197px;
+  height: 40px;
 }
 
 /* Contenedor de las imágenes adicionales */
@@ -160,6 +178,40 @@ ion-button {
   h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
+  }
+}
+
+.about_us_container{
+  width: 100%;
+  height: 374px;
+  position: relative;
+}
+
+.image-overlay-about_us {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4185AACC;
+  z-index: 1; /* Coloca la capa encima de la imagen */
+}
+
+.about_us_block {
+  width: 1240px;
+  height: 328px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  z-index: 2;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 20px;
+
+  h2 {
+    padding-top: 2rem;
+    text-align: center;
   }
 }
 
