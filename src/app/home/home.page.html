@@ -72,7 +72,7 @@
       </div>
     </div>
 
-    <div class="services-cards">
+    <div class="services-cards margin-bottom">
       <ion-grid>
         <ion-row>
           <ion-col>
@@ -82,7 +82,19 @@
               width="352px"
               height="277px"
               style="border-radius: 8px;"
+              class="margin-bottom"
             >
+            <div style="text-align: center; width: 352px;" class="margin-bottom">
+              <ion-text style="font-weight: 700; font-size: 2rem;">
+                Propietarios de viviendas
+              </ion-text>
+            </div>
+
+            <div style="text-align: center; width: 352px; margin-bottom: 1.5rem;">
+              <ion-text style="font-weight: 400; font-size: 0.8rem;">
+                Lorem ipsum dolor sit amet consectetur. A aliquam hac tortor massa hendrerit vitae. Odio volutpat sit tincidunt mauris proin sed sed quisque.
+              </ion-text>
+            </div>
           </ion-col>
           <ion-col>
             <img
@@ -91,7 +103,19 @@
               width="352px"
               height="277px"
               style="border-radius: 8px;"
+              class="margin-bottom"
             >
+            <div style="text-align: center; width: 352px;" class="margin-bottom">
+              <ion-text style="font-weight: 700; font-size: 2rem;">
+                Empresas de remodelación
+              </ion-text>
+            </div>
+
+            <div style="text-align: center; width: 352px; margin-bottom: 1.5rem;">
+              <ion-text style="font-weight: 400; font-size: 0.8rem;">
+                Lorem ipsum dolor sit amet consectetur. A aliquam hac tortor massa hendrerit vitae. Odio volutpat sit tincidunt mauris proin sed sed quisque.
+              </ion-text>
+            </div>
           </ion-col>
           <ion-col>
             <img
@@ -100,10 +124,26 @@
               width="352px"
               height="277px"
               style="border-radius: 8px;"
+              class="margin-bottom"
             >
+            <div style="text-align: center; width: 352px;" class="margin-bottom">
+              <ion-text style="font-weight: 700; font-size: 2rem;">
+                Propietarios de negocios
+              </ion-text>
+            </div>
+
+            <div style="text-align: center; width: 352px; margin-bottom: 1.5rem;">
+              <ion-text style="font-weight: 400; font-size: 0.8rem;">
+                Lorem ipsum dolor sit amet consectetur. A aliquam hac tortor massa hendrerit vitae. Odio volutpat sit tincidunt mauris proin sed sed quisque.
+              </ion-text>
+            </div>
           </ion-col>
         </ion-row>
       </ion-grid>
+    </div>
+
+    <div class="services_btn_show_more">
+      <ion-button fill="outline">Ver Galería</ion-button>
     </div>
   </div>
 
@@ -173,11 +213,87 @@
   </div> -->
 
   <div class="sucursales_section" id="sucursales-section">
-    <div class="products_title">
-      <h2 style="font-size: 3rem; font-weight: 500; margin-top: 1rem;">Encuentra tu Sucursal</h2>
+    <div class="sucursales-header">
+      <h2 class="sub-title">Encuentra tu Sucursal</h2>
+
+      <div class="separator-line"></div>
+
+      <div style="max-width: 1240px; margin-bottom: 4rem;">
+        <div style="width: 100%; text-align: center;">
+          <ion-text style="font-weight: 400; font-size: 1.25rem; line-height: 32px; letter-spacing: -0.5;">
+            En Loga, estamos comprometidos con acercarte las mejores soluciones en aluminio y vidrio. Visítanos en cualquiera de nuestras sucursales y descubre cómo podemos transformar tus espacios con calidad y estilo.</ion-text>
+        </div>
+      </div>
     </div>
 
-    <div class="sucursales_container">
+    <ion-grid style="margin-bottom: 4rem;">
+      <ion-row style="display: flex; justify-content: center; align-items: center; gap: 2rem;">
+        @for(branch of branches; track $index) {
+          <ion-col size="5" style="width: 8rem; height: 372px; border-radius: 8px; background-color: white; display: flex;">
+            <img
+              [src]="branch.image"
+              alt=""
+              style="width: 30%;
+              height: 100%;
+              gap: 10px;
+              object-fit: cover;"
+            >
+            <img
+              src="../../assets/img/sucursales/layers/layer_card_sucursal.png"
+              alt=""
+              style="
+                top: 0;
+                left: 115px;
+                position: absolute;
+              "
+            >
+
+            <div style="    width: 100%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding-left: 3rem;
+        ">
+        <div style="max-width: 282px; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+          <ion-text
+          class="margin-bottom"
+              style="font-family: Rubik;
+              font-size: 28px;
+              font-weight: 700;
+              line-height: 44.8px;
+              text-align: center;
+              text-underline-position: from-font;
+              text-decoration-skip-ink: none;
+              color: #4185AA;
+              ">
+                {{branch.title}}
+              </ion-text>
+
+              <div style="text-align: center;"><ion-text style="font-family: Rubik;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 22.4px;
+              letter-spacing: 0.15000000596046448px;
+              text-align: center;
+              text-underline-position: from-font;
+              text-decoration-skip-ink: none;
+              color: #212121;
+              ">
+                {{branch.address}}
+              </ion-text></div>
+        </div>
+            </div>
+          </ion-col>
+        }
+      </ion-row>
+    </ion-grid>
+
+    <!-- <div class="products_title">
+      <h2 style="font-size: 3rem; font-weight: 500; margin-top: 1rem;">Encuentra tu Sucursal</h2>
+    </div> -->
+
+    <!-- <div class="sucursales_container">
       <ion-grid style="width: 100%;">
         @for(branch of branches; track $index) {
           <ion-row style="width: 100%;" class="margin-bottom">
@@ -200,7 +316,7 @@
           </ion-row>
         }
       </ion-grid>
-    </div>
+    </div> -->
   </div>
 
   <!-- <div class="section_map_container">
