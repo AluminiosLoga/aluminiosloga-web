@@ -72,7 +72,7 @@
       </div>
     </div>
 
-    <div class="services-cards margin-bottom">
+    <div class="services-cards">
       <ion-grid>
         <ion-row>
           <ion-col>
@@ -214,7 +214,7 @@
 
   <div class="sucursales_section" id="sucursales-section">
     <div class="sucursales-header">
-      <h2 class="sub-title">Encuentra tu Sucursal</h2>
+      <h2 class="sub-title">Encuentra tu sucursal</h2>
 
       <div class="separator-line"></div>
 
@@ -317,6 +317,50 @@
         }
       </ion-grid>
     </div> -->
+  </div>
+
+  <div class="frequent_questions_section">
+    <div class="sucursales-header">
+      <h2 class="sub-title">Preguntas frecuentes</h2>
+
+      <div class="separator-line"></div>
+
+      <div style="max-width: 1240px; margin-bottom: 1rem;">
+        <div style="width: 100%; text-align: center;">
+          <ion-text style="font-weight: 400; font-size: 1.25rem; line-height: 32px; letter-spacing: -0.5;">
+            En Loga, queremos que tengas toda la información necesaria para tomar la mejor decisión en tus proyectos. Aquí respondemos las preguntas más comunes sobre nuestros servicios, procesos y productos para que disfrutes de una experiencia sin preocupaciones.</ion-text>
+        </div>
+      </div>
+    </div>
+
+    <div style="width: 85%; margin-bottom: 4rem;">
+      <div style="display: flex; flex-direction: column; padding-left: 0.2rem;">
+        @for(question of frequent_questions; track $index) {
+          <ion-accordion-group>
+            <ion-accordion value="first">
+              <ion-item slot="header">
+                <ion-label>{{question.question}}</ion-label>
+                <ion-icon
+                class="ion-accordion-toggle-icon custom-icon"
+                name="chevron-down-outline"
+                slot="end">
+              </ion-icon>
+              </ion-item>
+              <div style="padding: 1rem;" slot="content">
+                @for(desc of question.descriptions; track $index) {
+                  <div>
+                    <ion-text style="font-size: 1rem;">
+                      {{desc}}
+                    </ion-text>
+                  </div>
+                }
+              </div>
+            </ion-accordion>
+            <!-- <hr style="border-top: 1px solid #931F36; margin: 0.5rem 0;"> -->
+          </ion-accordion-group>
+        }
+      </div>
+    </div>
   </div>
 
   <!-- <div class="section_map_container">
