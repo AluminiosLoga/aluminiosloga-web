@@ -13,6 +13,10 @@ h2 {
   margin-bottom: 1rem;
 }
 
+.padding-top-05 {
+  padding-top: 0.5rem;
+}
+
 .separator-line {
   height: 4px;
   width: 182px;
@@ -148,9 +152,9 @@ h2 {
   }
 }
 
-ion-text {
-  font-size: clamp(0.8rem, 3vw, 1rem);
-}
+// ion-text {
+//   font-size: clamp(0.8rem, 3vw, 1rem);
+// }
 
 .text_1 {
   font-size: clamp(0.8rem, 3vw, 1rem);
@@ -459,6 +463,10 @@ ion-accordion.accordion-expanded ion-item[slot='header'] {
 //   --color: white; /* Color del texto en hover */
 // }
 
+.contact_section {
+  background-color: var(--ion-color-secondary);
+}
+
 ion-fab {
   margin: 1rem 2rem 1rem 1rem;
 }
@@ -471,30 +479,61 @@ ion-fab-button {
   }
 }
 
-footer {
-  background-color: black;
+.footer_section {
+  background-color: #101213;
   color: white;
   height: fit-content;
   padding: 2rem;
-}
-
-.contact_content {
+  width: 100%;
   display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
 }
 
-.card_contact {
-  margin-right: 2rem;
+.footer_content {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  width: 95%;
 }
 
-.footer_contact_option {
-  padding-left: 0.2rem;
+.categories_info_footer {
+  width: 300px;
 }
 
-.footer_option_redirect {
-  text-decoration: none;
-  cursor: pointer;
-  color: white;
-  border-bottom: 2px solid white;
+.title-footer {
+  font-family: Rubik;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.sub-title-footer {
+  font-family: Rubik;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.separator-line-footer {
+  height: 1px;
+  width: 95%;
+  // border-radius: 10px;
+  margin: 1.25rem 0rem;
+  border: 1px solid #404040
+}
+
+.brand_footer_section {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
 }
 
 .anim {

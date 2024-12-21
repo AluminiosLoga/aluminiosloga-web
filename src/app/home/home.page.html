@@ -363,6 +363,81 @@
     </div>
   </div>
 
+  <div class="contact_section">
+    <div class="sucursales-header">
+      <h2 class="sub-title" style="color: white;">Contacto</h2>
+
+      <div class="separator-line" style="background-color: white;"></div>
+
+      <div style="max-width: 1240px; margin-bottom: 1rem;">
+        <div style="width: 100%; text-align: center;">
+          <ion-text style="font-weight: 400; font-size: 1.25rem; line-height: 32px; letter-spacing: -0.5; color: white;">
+            En Loga, estamos aquí para ayudarte. Si tienes dudas, quieres solicitar una cotización o necesitas más información sobre nuestros productos y servicios, no dudes en ponerte en contacto con nosotros. Estamos listos para atenderte y acompañarte en cada paso de tu proyecto.</ion-text>
+        </div>
+      </div>
+    </div>
+
+    <ion-grid style="padding-bottom: 4rem;">
+      <ion-row style="display: flex; justify-content: center; align-items: center; gap: 2rem;">
+        @for(card of contact_cards; track $index) {
+
+          <ion-col style="max-width: 400px;
+          height: 188px;
+          padding: 24px;
+          gap: 20px;
+          border-radius: 16px;
+          background: #D5F0FF;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          ">
+            <img
+              [src]="card.image"
+              alt=""
+              style="height: 50px; width: 50px;"
+            >
+
+        <div style="    width: 100%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;">
+          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+            <ion-text
+            class="margin-bottom"
+              style="font-family: Rubik;
+              font-size: 20px;
+              font-weight: 700;
+              line-height: 28px;
+              letter-spacing: 0.15000000596046448px;
+              text-align: center;
+              text-underline-position: from-font;
+              text-decoration-skip-ink: none;
+              color: #1F2328;
+              ">
+                {{card.title}}
+              </ion-text>
+
+              <div style="text-align: center;"><ion-text style="font-family: Rubik;
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 33.6px;
+                letter-spacing: 0.15000000596046448px;
+                text-align: center;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+                color: #1F2328;
+              ">
+                {{card.desc}}
+              </ion-text></div>
+            </div>
+          </div>
+        </ion-col>}
+      </ion-row>
+    </ion-grid>
+  </div>
+
   <!-- <div class="section_map_container">
     <div class="products_title map_title">
       <h2 style="margin: 0; color: white;">Nosotros te decimos como llegar</h2>
@@ -421,115 +496,87 @@
     </ion-fab-button>
   </ion-fab>
 
-  <footer id="footer-section">
+  <footer class="footer_section">
     <div class="footer_content">
-      <div class="main_footer_content">
-        <div class="contact_content">
-          <div class="card_contact">
-            <div class="margin-bottom">
-              <ion-text style="font-size: 1.3rem; font-weight: 600; color: #C9BE2C;">
-                Contacto
-              </ion-text>
-            </div>
+      <div>
+        <ion-text style="font-family: Rubik;
+      font-size: 2rem;
+      font-weight: 500;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      padding-right: 1.5rem;
 
-            <div style="display: flex; align-items: center;" class="footer_contact_option margin-bottom">
-              <a class="footer_option_redirect" (click)="scrollToSection('home-section')">
-                Inicio
-              </a>
-            </div>
-
-            <!-- <div style="display: flex; align-items: center;" class="margin-bottom">
-              <ion-text (click)="scrollToSection('about_us')" style="cursor: pointer;">
-                Sobre nosotros
-              </ion-text>
-            </div> -->
-
-            <div style="display: flex; align-items: center;" class="footer_contact_option margin-bottom">
-              <a class="footer_option_redirect" (click)="scrollToSection('services-section')">
-                Servicios
-              </a>
-            </div>
-            <!-- 
-            <div style="display: flex; align-items: center;" class="margin-bottom">
-              <ion-text (click)="scrollToSection('sucursales-section')" style="cursor: pointer;">
-                Sucursales
-              </ion-text>
-            </div>
-
-            <div style="display: flex; align-items: center;" class="margin-bottom">
-              <ion-text (click)="scrollToSection('frequent-questions-section')" style="cursor: pointer;">
-                Preguntas frecuentes
-              </ion-text>
-            </div> -->
-
-            <div style="display: flex; align-items: center;" class="footer_contact_option">
-              <!-- <ion-icon name="call" style="padding-right: 0.3rem; color: #C9BE2C;"></ion-icon> -->
-              <a class="footer_option_redirect" href="https://wa.me/528111875544">
-                Contacto
-              </a>
-            </div>
-          </div>
-
-          <div class="card_contact" style="width: 60%;">
-            <div class="margin-bottom">
-              <ion-text style="font-size: 1.3rem; font-weight: 600; color: #C9BE2C;">
-                Preguntas frequentes
-              </ion-text>
-            </div>
-
-            <div style="display: flex; flex-direction: column; padding-left: 0.2rem;">
-              @for(question of frequent_questions; track $index) {
-                <ion-accordion-group>
-                  <ion-accordion value="first">
-                    <ion-item slot="header">
-                      <ion-label>{{question.question}}</ion-label>
-                      <ion-icon
-                      class="ion-accordion-toggle-icon custom-icon"
-                      name="chevron-down-outline"
-                      slot="end">
-                    </ion-icon>
-                    </ion-item>
-                    <div style="padding: 1rem;" slot="content">
-                      @for(desc of question.descriptions; track $index) {
-                        <div>
-                          <ion-text style="font-size: 1rem;">
-                            {{desc}}
-                          </ion-text>
-                        </div>
-                      }
-                    </div>
-                  </ion-accordion>
-                  <!-- <hr style="border-top: 1px solid #931F36; margin: 0.5rem 0;"> -->
-                </ion-accordion-group>
-              }
-            </div>
-          </div>
-        </div>
-        <!-- <div class="our_mission_content">
-          <div>
-            <ion-text>
-              Nuestra mision
-            </ion-text>
-          </div>
-        </div> -->
+      ">
+        LOGA
+      </ion-text>
       </div>
-      <!-- <div class="secondary_footer_content">
-        <div class="copyright_content">
-          <div>
+
+      <div class="categories_info_footer">
+        <div class="title-footer padding-top-05">
+          <ion-text>Categorías</ion-text>
+        </div>
+
+        <div class="sub-titles-footer">
+          <div class="sub-title-footer padding-top-05">
             <ion-text>
-              Copyright
+              Todas
+            </ion-text>
+          </div>
+          <div class="sub-title-footer padding-top-05">
+            <ion-text>
+              Ventanas
+            </ion-text>
+          </div>
+          <div class="sub-title-footer padding-top-05">
+            <ion-text>
+              Puertas
             </ion-text>
           </div>
         </div>
-        <div class="social_media_content">
-          <div>
+      </div>
+
+      <div class="categories_info_footer">
+        <div class="title-footer padding-top-05">
+          <ion-text>Recursos</ion-text>
+        </div>
+
+        <div class="sub-titles-footer">
+          <div class="sub-title-footer padding-top-05">
             <ion-text>
-              Redes
+              Blog
+            </ion-text>
+          </div>
+          <div class="sub-title-footer padding-top-05">
+            <ion-text>
+              Facebook
+            </ion-text>
+          </div>
+          <div class="sub-title-footer padding-top-05">
+            <ion-text>
+              Soporte
             </ion-text>
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
+
+    <div class="separator-line-footer"></div>
+
+    <div class="brand_footer_section">
+      <div><img src="../../assets/img/contact/Facebook.png" alt="" width="24" height="24"></div>
+      <div style="font-family: Rubik;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20.02px;
+      letter-spacing: 0.15000000596046448px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      ">© 2024 Aluminios Loga</div>
+      <div></div>
+    </div>
+
   </footer>
 </ion-content>
 

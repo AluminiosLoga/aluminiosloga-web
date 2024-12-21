@@ -87,6 +87,26 @@ export class HomePage {
       url: 'https://maps.app.goo.gl/LFdzK1Rokn28iJiq8'
     }
   ];
+  contact_cards = [
+    {
+      image: "../../assets/img/contact/instagram.png",
+      title: 'Instagram',
+      desc: '@AluminiosLoga',
+      url: 'https://maps.app.goo.gl/LFdzK1Rokn28iJiq8'
+    },
+    {
+      image: "../../assets/img/contact/mail-01.png",
+      title: 'Correo electrónico',
+      desc: 'aluminiosloga@gmail.com',
+      url: 'https://maps.app.goo.gl/LFdzK1Rokn28iJiq8'
+    },
+    {
+      image: "../../assets/img/contact/clock-01.png",
+      title: 'Horario de atención',
+      desc: '09:00 a.m. - 19:00 p.m.',
+      url: 'https://maps.app.goo.gl/LFdzK1Rokn28iJiq8'
+    }
+  ]
 
   constructor(private menu: MenuController, private router: Router) {}
 
