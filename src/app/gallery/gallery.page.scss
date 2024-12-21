@@ -1,6 +1,7 @@
 .photo-gallery {
     display: flex;
     gap: 20px;
+    margin-bottom: 4rem;
 }
   
 .column {
@@ -19,10 +20,8 @@
 
 .products_container {
     min-height: 500px;
-    max-width: 1500px;
     width: 90%;
     margin: auto;
-    padding: 110px 1rem 1rem 1rem;
 }
 
 .products_title {
@@ -34,3 +33,28 @@
       margin-bottom: 1rem;
     }
 }
+
+.sucursales-header {
+    padding-top: 5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sub-title {
+    font-size: 2.5rem;
+    color: var(--ion-color-primary);
+    font-weight: 700;
+    line-height: 3rem;
+    letter-spacing: -0.5px;
+  }
+
+  .separator-line {
+    height: 4px;
+    width: 182px;
+    border-radius: 10px;
+    background-color: var(--ion-color-secondary);
+    margin: 1.25rem 0rem;
+  }

@@ -19,12 +19,9 @@
           <h2 class="centered-description margin-bottom">
             Contamos con servicio a domicilio en toda el Área Metropolitana de Monterrey.
           </h2>
-          <ion-button color="primary">Ponte en contacto</ion-button>
+          <ion-button color="primary" href="https://api.whatsapp.com/send?phone=8180590778">Ponte en contacto</ion-button>
         </div>
       </div>
-      <!-- <div class="image-home-container">
-        <ion-img [src]="currentImage"></ion-img>
-      </div> -->
     </div>
   </div>
 
@@ -58,7 +55,7 @@
     </div>
   </div>
 
-  <div class="services-section">
+  <div class="services-section" id="services-section">
     <div class="services-header">
       <h2 class="sub-title">Servicios</h2>
 
@@ -143,7 +140,7 @@
     </div>
 
     <div class="services_btn_show_more">
-      <ion-button fill="outline">Ver Galería</ion-button>
+      <ion-button fill="outline" (click)="navigateTo('gallery')">Ver Galería</ion-button>
     </div>
   </div>
 
@@ -319,7 +316,7 @@
     </div> -->
   </div>
 
-  <div class="frequent_questions_section">
+  <div class="frequent_questions_section" id="freq_questions">
     <div class="sucursales-header">
       <h2 class="sub-title">Preguntas frecuentes</h2>
 
@@ -363,7 +360,7 @@
     </div>
   </div>
 
-  <div class="contact_section">
+  <div class="contact_section" id="contact_section">
     <div class="sucursales-header">
       <h2 class="sub-title" style="color: white;">Contacto</h2>
 

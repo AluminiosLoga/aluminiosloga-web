@@ -7,7 +7,7 @@
         justify-content: center;
         align-items: center;"
     >
-      <ion-icon *ngIf="backButton" style="margin-right: .5rem; font-size: 1.8rem;" name="arrow-back" (click)="navigateTo('home')"></ion-icon>
+      <ion-icon *ngIf="backButton" style="margin-right: .5rem; font-size: 1.8rem; color: white;" name="arrow-back" (click)="navigateTo('home')"></ion-icon>
       <ion-img src="../../assets/icon/logoToolbar.png" (click)="onLogoClick()" style="width: 76px; height: 60px; cursor: pointer;"></ion-img>
     </div>
 
@@ -16,15 +16,15 @@
       <!-- [style.color]="activeSection === 'home-section' ? '#4185AA' : '#FFF'"  -->
       <ion-button
         class="tab"
-        (click)="onButtonClick('home-section')"> Sobre nosotros </ion-button>
+        (click)="onButtonClick('about_us')"> Sobre nosotros </ion-button>
       <ion-button class="tab"
-       (click)="onButtonClick('about_us')"> Servicios </ion-button>
+       (click)="onButtonClick('services-section')"> Servicios </ion-button>
       <ion-button class="tab"
-        (click)="onButtonClick('services-section')"> Encuentra tu sucursal </ion-button>
+        (click)="onButtonClick('sucursales-section')"> Encuentra tu sucursal </ion-button>
       <ion-button class="tab" 
-        (click)="onButtonClick('sucursales-section')"> Preguntas frecuentes </ion-button>
+        (click)="onButtonClick('freq_questions')"> Preguntas frecuentes </ion-button>
       <ion-button class="tab"
-        (click)="onButtonClick('footer-section')"> Contacto </ion-button>
+        (click)="onButtonClick('contact_section')"> Contacto </ion-button>
     </ion-buttons>
 
     <!-- Icono de menú hamburguesa visible en pantallas pequeñas -->
