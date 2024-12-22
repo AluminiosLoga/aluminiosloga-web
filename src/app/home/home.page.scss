@@ -18,7 +18,7 @@ h2 {
 }
 
 .separator-line {
-  height: 4px;
+  min-height: 4px;
   width: 182px;
   border-radius: 10px;
   background-color: var(--ion-color-secondary);
@@ -26,7 +26,7 @@ h2 {
 }
 
 .sub-title {
-  font-size: 2.5rem;
+  font-size: clamp(1.4rem, 2.5vw, 2.5rem);
   color: var(--ion-color-primary);
   font-weight: 700;
   line-height: 3rem;
@@ -238,6 +238,18 @@ ion-button {
   }
 }
 
+.sub-sub_title {
+  font-weight: 400;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 32px;
+  letter-spacing: -0.5;
+}
+
+.about_us_second_text_container {
+  width: 100%;
+  text-align: center;
+}
+
 .services-section {
   width: 100%;
   padding: 1rem;
@@ -359,6 +371,7 @@ ion-button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .sucursales_container {
@@ -592,6 +605,22 @@ ion-fab-button {
   .main-info-container {
     width: 100%;
     margin-left: 2rem;
+  }
+
+  .centered-description {
+    max-width: 90%;
+  }
+
+  .about_us_block {
+    margin-top: 0;
+  }
+
+  .separator-line {
+    margin: 0.5rem 0rem;
+  }
+  
+  .about_us_second_text_container {
+    display: none;
   }
 
   .our_services {
