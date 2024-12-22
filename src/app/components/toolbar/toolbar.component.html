@@ -12,7 +12,7 @@
     </div>
 
     <!-- Botones visibles en pantallas grandes -->
-    <ion-buttons slot="end" class="desktop-menu">
+    <ion-buttons slot="end" class="desktop-menu" *ngIf="!backButton">
       <!-- [style.color]="activeSection === 'home-section' ? '#4185AA' : '#FFF'"  -->
       <ion-button
         class="tab"

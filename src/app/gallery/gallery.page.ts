@@ -14,38 +14,38 @@ export class GalleryPage implements OnInit {
 
   constructor() {
     this.imgList1 = [
-      'svc1.png',
-      'svc2.png',
+      'svc11.png',
       'svc3.png',
       'svc4.png',
-      'svc5.png',
-      'svc6.png',
+      'svc7.png',
+      'svc18.png',
+      'svc23.png',
     ];
 
     this.imgList2 = [
-      'svc7.png',
+      'svc16.png',
       'svc8.png',
-      'svc9.png',
+      'svc5.png',
       'svc10.png',
-      'svc11.png',
-      'svc12.png',
+      'svc6.png',
     ];
 
     this.imgList3 = [
-      'svc13.png',
+      'svc9.png',
       'svc14.png',
+      'svc13.png',
       'svc15.png',
-      'svc16.png',
+      'svc1.png',
       'svc17.png',
-      'svc18.png',
     ];
 
     this.imgList4 = [
+      'svc2.png',
       'svc19.png',
       'svc20.png',
       'svc21.png',
       'svc22.png',
-      'svc23.png',
+      'svc12.png',
     ];
   }
 
