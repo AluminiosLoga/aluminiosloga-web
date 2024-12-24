@@ -216,7 +216,7 @@
 
       <div class="separator-line"></div>
 
-      <div style="max-width: 1240px; margin-bottom: 4rem;">
+      <div class="sucursal_sub_title_content">
         <div style="width: 100%; text-align: center;">
           <ion-text class="sub-sub_title">
             En Loga, estamos comprometidos con acercarte las mejores soluciones en aluminio y vidrio. Visítanos en cualquiera de nuestras sucursales y descubre cómo podemos transformar tus espacios con calidad y estilo.</ion-text>
@@ -227,7 +227,7 @@
     <ion-grid style="margin-bottom: 4rem;">
       <ion-row style="display: flex; justify-content: center; align-items: center; gap: 2rem;">
         @for(branch of branches; track $index) {
-          <ion-col sizeXs="12" sizeMd="5" (click)="goToBranch(branch.url)" style="cursor: pointer;">
+          <ion-col class="sucursales_col" sizeXs="12" sizeMd="5" (click)="goToBranch(branch.url)">
             <img
               [src]="branch.image"
               alt=""
@@ -249,31 +249,12 @@
             flex-direction: column;
             padding-left: 3rem;
         ">
-        <div style="max-width: 282px; display: flex; justify-content: center; align-items: center; flex-direction: column;">
-          <ion-text
-          class="margin-bottom"
-              style="font-family: Rubik;
-              font-size: 28px;
-              font-weight: 700;
-              line-height: 44.8px;
-              text-align: center;
-              text-underline-position: from-font;
-              text-decoration-skip-ink: none;
-              color: #4185AA;
-              ">
+        <div style="max-width: 282px; display: flex; justify-content: center; align-items: start; flex-direction: column;">
+          <ion-text class="margin-bottom sucursales_title_card">
                 {{branch.title}}
               </ion-text>
 
-              <div style="text-align: center;"><ion-text style="font-family: Rubik;
-              font-size: 14px;
-              font-weight: 400;
-              line-height: 22.4px;
-              letter-spacing: 0.15000000596046448px;
-              text-align: center;
-              text-underline-position: from-font;
-              text-decoration-skip-ink: none;
-              color: #212121;
-              ">
+              <div><ion-text class="sucursales_direccion_card">
                 {{branch.address}}
               </ion-text></div>
               </div>
@@ -320,8 +301,8 @@
 
       <div class="separator-line"></div>
 
-      <div style="max-width: 1240px; margin-bottom: 1rem;">
-        <div style="width: 100%; text-align: center;">
+      <div style="max-width: 1240px; display: flex; margin-bottom: 1rem; justify-content: center;">
+        <div style="width: 95%; text-align: center;">
           <ion-text class="sub-sub_title">
             En Loga, queremos que tengas toda la información necesaria para tomar la mejor decisión en tus proyectos. Aquí respondemos las preguntas más comunes sobre nuestros servicios, procesos y productos para que disfrutes de una experiencia sin preocupaciones.</ion-text>
         </div>
@@ -364,8 +345,8 @@
 
       <div class="separator-line" style="background-color: white;"></div>
 
-      <div style="max-width: 1240px; margin-bottom: 1rem;">
-        <div style="width: 100%; text-align: center;">
+      <div style="max-width: 1240px; display: flex; margin-bottom: 1rem; justify-content: center;">
+        <div style="width: 95%; text-align: center;">
           <ion-text class="sub-sub_title" style="color: white;">
             En Loga, estamos aquí para ayudarte. Si tienes dudas, quieres solicitar una cotización o necesitas más información sobre nuestros productos y servicios, no dudes en ponerte en contacto con nosotros. Estamos listos para atenderte y acompañarte en cada paso de tu proyecto.</ion-text>
         </div>
@@ -626,6 +607,9 @@
       <div class="separator-line" style="background-color: white; height: 1px; width: 80%; margin: 10px 0;"></div>
 
       <ion-button class="tab" (click)="scrollToSection('services-section', true)">SERVICIOS</ion-button>
+      <div class="separator-line" style="background-color: white; height: 1px; width: 80%; margin: 10px 0;"></div>
+
+      <ion-button class="tab" (click)="navigateTo('gallery', true)">GALERIA</ion-button>
       <div class="separator-line" style="background-color: white; height: 1px; width: 80%; margin: 10px 0;"></div>
 
       <ion-button class="tab" (click)="scrollToSection('sucursales-section', true)">SUCURSALES</ion-button>

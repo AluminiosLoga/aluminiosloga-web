@@ -146,8 +146,12 @@ export class HomePage {
     this.currentImage = this.images[this.currentIndex];
   }
 
-  navigateTo(page: string) {
+  navigateTo(page: string, fromMobile?: boolean) {
     this.router.navigate(['/' + page]);
+
+    if(fromMobile) {
+      this.toggleMenu();
+    }
   }
 
   openMenu() {

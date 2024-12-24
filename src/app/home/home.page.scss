@@ -241,7 +241,7 @@ ion-button {
 
 .sub-sub_title {
   font-weight: 400;
-  font-size: clamp(1rem, 5vw, 1.25rem);
+  font-size: clamp(0.8rem, 4vw, 1.25rem);
   line-height: 32px;
   letter-spacing: -0.5;
 }
@@ -397,10 +397,43 @@ ion-button {
   }
 }
 
+.sucursales_col {
+  cursor: pointer;
+  height: auto;
+}
+
+.sucursal_sub_title_content {
+  max-width: 1240px;
+  margin-bottom: 4rem
+}
+
 .img-sucursal-separator {
   top: 0;
   left: 23%;
   position: absolute;
+}
+
+.sucursales_title_card {
+  font-family: Rubik;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 44.8px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #4185AA;
+}
+
+.sucursales_direccion_card {
+  font-family: Rubik;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22.4px;
+  letter-spacing: 0.15000000596046448px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #212121;
 }
 
 .branch-address {
@@ -667,6 +700,12 @@ ion-fab-button {
         gap: 1rem;
       }
     }
+
+    ion-col {
+      box-shadow: 0px 0px 20px -2px #4185AA33;
+      padding: 24px;
+      border-radius: 8px;
+    }
   }
 
   .our_services {
@@ -713,6 +752,14 @@ ion-fab-button {
     height: 100%;
   }
 
+  .sucursales_title_card {
+    text-align: start;
+  }
+
+  .sucursales_direccion_card {
+    text-align: start;
+  }
+
   footer {
     padding: 1rem;
   }
@@ -720,6 +767,30 @@ ion-fab-button {
   ion-fab {
     margin: 0; 
   }
+  
+  .services-header {
+    padding-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .sucursales-header {
+    padding-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .sucursal_sub_title_content {
+    max-width: 1240px;
+    margin-bottom: 1rem;
+  }
+
+  .sucursales_col {
+    height: 250px !important;
+  }
+}
+
+.tab {
+  font-weight: 300;
+  color: white;
 }
 
 @media (max-width: 1665px) {
