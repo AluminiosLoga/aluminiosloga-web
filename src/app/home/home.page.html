@@ -1,5 +1,6 @@
 <app-toolbar (logoClicked)="scrollToTop()"
-  (scrollToSection)="scrollToSection($event)"></app-toolbar>
+  (scrollToSection)="scrollToSection($event)"
+  (toggleMenu)="toggleMenu()"></app-toolbar>
 
 <ion-content id="main-content">
   <div class="home-section" id="home-section">
@@ -226,7 +227,7 @@
     <ion-grid style="margin-bottom: 4rem;">
       <ion-row style="display: flex; justify-content: center; align-items: center; gap: 2rem;">
         @for(branch of branches; track $index) {
-          <ion-col sizeXs="12" sizeMd="5">
+          <ion-col sizeXs="12" sizeMd="5" (click)="goToBranch(branch.url)" style="cursor: pointer;">
             <img
               [src]="branch.image"
               alt=""
@@ -275,9 +276,10 @@
               ">
                 {{branch.address}}
               </ion-text></div>
-        </div>
+              </div>
             </div>
           </ion-col>
+        
         }
       </ion-row>
     </ion-grid>
@@ -374,18 +376,20 @@
       <ion-row style="display: flex; justify-content: center; align-items: center; gap: 2rem;">
         @for(card of contact_cards; track $index) {
           <a [href]="card.url" target="_blank" style="width: 400px;
-            height: 188px; text-decoration: none;">
-            <ion-col style="max-width: 400px;
-            height: 188px;
-            padding: 24px;
-            gap: 20px;
-            border-radius: 16px;
-            background: #D5F0FF;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
+            height: 188px; text-decoration: none; display: flex; justify-content: center;">
+            <ion-col style="
+              max-width: 85%;
+              width: 400px;
+              height: 188px;
+              padding: 24px;
+              gap: 20px;
+              border-radius: 16px;
+              background: #D5F0FF;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer;
             "
             >
               <img
@@ -497,7 +501,7 @@
     <div class="footer_content">
       <div>
         <ion-text style="font-family: Rubik;
-      font-size: 2rem;
+      font-size: clamp(1.5rem, 5vw, 2rem);
       font-weight: 500;
       text-align: left;
       text-underline-position: from-font;
@@ -515,17 +519,17 @@
         </div>
 
         <div class="sub-titles-footer">
-          <div class="sub-title-footer padding-top-05">
+          <div class="sub-title-footer padding-top-05" (click)="navigateTo('gallery')">
             <ion-text>
               Ver Galería
             </ion-text>
           </div>
-          <div class="sub-title-footer padding-top-05">
+          <div class="sub-title-footer padding-top-05" (click)="goToBranch('https://www.facebook.com/aluminios.loga')">
             <ion-text>
               Facebook
             </ion-text>
           </div>
-          <div class="sub-title-footer padding-top-05">
+          <div class="sub-title-footer padding-top-05" (click)="goToBranch('https://wa.me/528111875544')">
             <ion-text>
               Whatsapp
             </ion-text>
@@ -539,17 +543,17 @@
         </div>
 
         <div class="sub-titles-footer">
-          <div class="sub-title-footer padding-top-05">
+          <div class="sub-title-footer padding-top-05" (click)="goToBranch('https://maps.app.goo.gl/LFdzK1Rokn28iJiq8')">
             <ion-text>
               Santa Catarina
             </ion-text>
           </div>
-          <div class="sub-title-footer padding-top-05">
+          <div class="sub-title-footer padding-top-05" (click)="goToBranch('https://maps.app.goo.gl/sB3KsBWRoVQoguZg7')">
             <ion-text>
               Sierra Real
             </ion-text>
           </div>
-          <div class="sub-title-footer padding-top-05">
+          <div class="sub-title-footer padding-top-05" (click)="goToBranch('https://maps.app.goo.gl/LFdzK1Rokn28iJiq8')">
             <ion-text>
               Santa Catarina
             </ion-text>
@@ -570,7 +574,7 @@
       text-align: left;
       text-underline-position: from-font;
       text-decoration-skip-ink: none;
-      ">© 2024 Aluminios Loga</div>
+      ">© {{ getCurrentYear() }} Aluminios Loga</div>
       <div></div>
     </div>
 
@@ -594,7 +598,7 @@
   </ion-content>
 </ion-menu> -->
 
-<ion-menu side="end" contentId="main-content">
+<!-- <ion-menu side="end" contentId="main-content">
   <ion-header>
     <ion-toolbar>
       <ion-title>Menu Content</ion-title>
@@ -607,4 +611,30 @@
       <ion-item (click)="closeMenu()">Contacto</ion-item>
     </ion-list>
   </ion-content>
-</ion-menu>
+</ion-menu> -->
+
+<!-- Menú personalizado -->
+<div class="custom-menu" *ngIf="isMenuOpen">
+  <div class="menu-overlay" (click)="toggleMenu()"></div>
+  <div class="menu-content">
+    <ion-buttons slot="end" style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column">
+      <ion-button class="tab" (click)="scrollToSection('about_us', true)">SOBRE NOSOTROS</ion-button>
+      <div class="separator-line" style="background-color: white; height: 1px; width: 80%; margin: 10px 0;"></div>
+
+      <ion-button class="tab" (click)="scrollToSection('services-section', true)">SERVICIOS</ion-button>
+      <div class="separator-line" style="background-color: white; height: 1px; width: 80%; margin: 10px 0;"></div>
+
+      <ion-button class="tab" (click)="scrollToSection('sucursales-section', true)">SUCURSALES</ion-button>
+      <div class="separator-line" style="background-color: white; height: 1px; width: 80%; margin: 10px 0;"></div>
+
+      <ion-button class="tab" (click)="scrollToSection('freq_questions', true)">PREGUNTAS FRECUENTES</ion-button>
+      <div class="separator-line" style="background-color: white; height: 1px; width: 80%; margin: 10px 0;"></div>
+
+      <ion-button class="tab" (click)="scrollToSection('contact_section', true)">CONTACTO</ion-button>
+    </ion-buttons>
+  </div>
+</div>

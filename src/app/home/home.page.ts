@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { IonContent, MenuController } from '@ionic/angular';
 import { ToolbarComponent } from '../components/toolbar/toolbar.component';
 import { Title } from '@angular/platform-browser';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -106,7 +107,8 @@ export class HomePage {
       desc: '09:30 a.m. - 20:00 p.m.',
       url: '://www.facebook.com/aluminios.loga'
     }
-  ]
+  ];
+  isMenuOpen: boolean = false;
 
   constructor(private menu: MenuController, private router: Router) {}
 
@@ -129,6 +131,10 @@ export class HomePage {
       console.error('Video play failed:', error);
     });
   };
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 
   // Función que realiza el scroll suave hacia arriba
   scrollToTop(): void {
@@ -156,10 +162,22 @@ export class HomePage {
     window.open(url, '_blank');
   }
 
-  scrollToSection(sectionId: string) {
+  scrollToSection(sectionId: string, fromMobile?: boolean) {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+    
+    if(fromMobile) {
+      this.toggleMenu();
+    }
+  }
+
+  goToBranch(url: string): void {
+    window.open(url, '_blank');
+  }
+
+  getCurrentYear(): number {
+    return new Date().getFullYear();
   }
 }

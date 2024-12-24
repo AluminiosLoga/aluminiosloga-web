@@ -28,8 +28,16 @@
     </ion-buttons>
 
     <!-- Icono de menú hamburguesa visible en pantallas pequeñas -->
-    <ion-buttons slot="end" class="mobile-menu-icon">
+    <!-- <ion-buttons slot="end" class="mobile-menu-icon">
       <ion-menu-button style="color: white;"></ion-menu-button>
-    </ion-buttons>
+    </ion-buttons> -->
+
+    <ion-icon 
+      name="menu-outline"
+      slot="end"
+      class="mobile-menu-icon"
+      style="color: white; font-size: 2rem;"
+      (click)="toggleMenuEmit()"
+      *ngIf="!backButton"></ion-icon>
   </ion-toolbar>
 </ion-header>

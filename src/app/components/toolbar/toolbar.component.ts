@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class ToolbarComponent  implements OnInit {
   @Output() scrollToSection = new EventEmitter<string>();
   @Output() logoClicked: EventEmitter<void> = new EventEmitter();
+  @Output() toggleMenu: EventEmitter<void> = new EventEmitter();
   @Input() backButton: boolean = false;
 
   activeSection: string = 'home-section';
@@ -29,5 +30,9 @@ export class ToolbarComponent  implements OnInit {
   onButtonClick(sectionId: string) {
     this.activeSection = sectionId;
     this.scrollToSection.emit(sectionId);
+  }
+
+  toggleMenuEmit() {
+    this.toggleMenu.emit();
   }
 }

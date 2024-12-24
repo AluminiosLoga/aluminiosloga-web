@@ -16,7 +16,33 @@
     </div>
 
     <div class="photo-gallery">
-      <div class="column">
+      <div class="column removeToDesktop">
+        @for (img of imgListMobile1; track $index) {
+          <div class="photo">
+            <a
+              [href]="'../../assets/img/services/' + img"
+              data-lightbox="models" data-title="'caption' + $index"
+            >
+              <img [src]="'../../assets/img/services/' + img" alt="">
+            </a>
+          </div>
+        }
+      </div>
+      
+      <div class="column removeToDesktop">
+        @for (img of imgListMobile2; track $index) {
+          <div class="photo">
+            <a
+              [href]="'../../assets/img/services/' + img"
+              data-lightbox="models" data-title="'caption' + $index"
+            >
+              <img [src]="'../../assets/img/services/' + img" alt="">
+            </a>
+          </div>
+        }
+      </div>
+
+      <div class="column removeToMobile">
         @for (img of imgList1; track $index) {
           <div class="photo">
             <a
@@ -29,7 +55,7 @@
         }
       </div>
   
-      <div class="column">
+      <div class="column removeToMobile">
         @for (img of imgList2; track $index) {
           <div class="photo">
             <a
@@ -42,7 +68,7 @@
         }
       </div>
   
-      <div class="column">
+      <div class="column removeToMobile">
         @for (img of imgList3; track $index) {
           <div class="photo">
             <a
@@ -55,7 +81,7 @@
         }
       </div>
   
-      <div class="column">
+      <div class="column removeToMobile">
         @for (img of imgList4; track $index) {
           <div class="photo">
             <a

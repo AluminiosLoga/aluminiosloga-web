@@ -70,3 +70,17 @@
       color: white;
     }
   }
+
+.removeToDesktop {
+  display: none;
+}
+  
+@media (max-width:768px) {
+  .removeToMobile {
+    display: none;
+  }
+
+  .removeToDesktop {
+    display: flex;
+  }
+}

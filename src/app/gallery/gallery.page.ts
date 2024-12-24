@@ -11,6 +11,8 @@ export class GalleryPage implements OnInit {
   imgList2: any;
   imgList3: any;
   imgList4: any;
+  imgListMobile1: any;
+  imgListMobile2: any;
 
   constructor() {
     this.imgList1 = [
@@ -46,6 +48,35 @@ export class GalleryPage implements OnInit {
       'svc21.png',
       'svc22.png',
       'svc12.png',
+    ];
+
+    this.imgListMobile1 = [
+      'svc11.png',
+      'svc3.png',
+      'svc4.png',
+      'svc16.png',
+      'svc8.png',
+      'svc5.png',
+      'svc10.png',
+      'svc6.png',
+      'svc7.png',
+      'svc18.png',
+      'svc23.png',
+    ];
+
+    this.imgListMobile2 = [
+      'svc9.png',
+      'svc14.png',
+      'svc13.png',
+      'svc2.png',
+      'svc19.png',
+      'svc20.png',
+      'svc21.png',
+      'svc22.png',
+      'svc12.png',
+      'svc15.png',
+      'svc1.png',
+      'svc17.png',
     ];
   }
 
