@@ -407,10 +407,19 @@ ion-button {
   margin-bottom: 4rem
 }
 
+// .img-sucursal-separator {
+//   top: 0;
+//   left: 23%;
+//   position: absolute;
+// }
+
 .img-sucursal-separator {
-  top: 0;
-  left: 23%;
+  width: 60px;
+  height: 100%;
   position: absolute;
+  top: 0;
+  left: 30%; /* Centramos el elemento horizontalmente */
+  transform: translateX(-50%); /* Ajustamos para que el punto medio esté centrado */
 }
 
 .sucursales_title_card {
@@ -749,7 +758,7 @@ ion-fab-button {
 
   .img-sucursal-separator {
     width: 40px;
-    height: 100%;
+    // height: 100%;
   }
 
   .sucursales_title_card {
