@@ -89,7 +89,7 @@
 
             <div style="text-align: center; width: 352px; margin-bottom: 1.5rem;">
               <ion-text style="font-weight: 400; font-size: 0.8rem;">
-                Lorem ipsum dolor sit amet consectetur. A aliquam hac tortor massa hendrerit vitae. Odio volutpat sit tincidunt mauris proin sed sed quisque.
+                En Loga, ayudamos a los propietarios a transformar sus hogares con soluciones personalizadas en aluminio y vidrio. Desde ventanas y puertas que maximizan la luz natural hasta repisas y barandales.
               </ion-text>
             </div>
           </ion-col>
@@ -110,7 +110,7 @@
 
             <div style="text-align: center; width: 352px; margin-bottom: 1.5rem;">
               <ion-text style="font-weight: 400; font-size: 0.8rem;">
-                Lorem ipsum dolor sit amet consectetur. A aliquam hac tortor massa hendrerit vitae. Odio volutpat sit tincidunt mauris proin sed sed quisque.
+                Colaboramos con empresas de remodelación para llevar sus proyectos al siguiente nivel. Proveemos materiales de alta calidad en aluminio y vidrio, adaptados a las especificaciones de cada obra.
               </ion-text>
             </div>
           </ion-col>
@@ -131,7 +131,7 @@
 
             <div style="text-align: center; width: 352px; margin-bottom: 1.5rem;">
               <ion-text style="font-weight: 400; font-size: 0.8rem;">
-                Lorem ipsum dolor sit amet consectetur. A aliquam hac tortor massa hendrerit vitae. Odio volutpat sit tincidunt mauris proin sed sed quisque.
+                Sabemos que la imagen de tu negocio es clave para atraer clientes y transmitir profesionalismo. Ofrecemos fachadas de vidrio, vitrinas, mostradores y divisores en aluminio que combinan estética y funcionalidad.
               </ion-text>
             </div>
           </ion-col>
@@ -373,63 +373,67 @@
     <ion-grid style="padding-bottom: 4rem;">
       <ion-row style="display: flex; justify-content: center; align-items: center; gap: 2rem;">
         @for(card of contact_cards; track $index) {
-
-          <ion-col style="max-width: 400px;
-          height: 188px;
-          padding: 24px;
-          gap: 20px;
-          border-radius: 16px;
-          background: #D5F0FF;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          ">
-            <img
-              [src]="card.image"
-              alt=""
-              style="height: 50px; width: 50px;"
-            >
-
-        <div style="    width: 100%;
-            justify-content: center;
+          <a [href]="card.url" target="_blank" style="width: 400px;
+            height: 188px; text-decoration: none;">
+            <ion-col style="max-width: 400px;
+            height: 188px;
+            padding: 24px;
+            gap: 20px;
+            border-radius: 16px;
+            background: #D5F0FF;
             display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            flex-direction: column;">
-          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
-            <ion-text
-            class="margin-bottom"
-              style="font-family: Rubik;
-              font-size: 20px;
-              font-weight: 700;
-              line-height: 28px;
-              letter-spacing: 0.15000000596046448px;
-              text-align: center;
-              text-underline-position: from-font;
-              text-decoration-skip-ink: none;
-              color: #1F2328;
-              ">
-                {{card.title}}
-              </ion-text>
-
-              <div style="text-align: center;"><ion-text style="font-family: Rubik;
-                font-size: 24px;
-                font-weight: 400;
-                line-height: 33.6px;
-                letter-spacing: 0.15000000596046448px;
-                text-align: center;
-                text-underline-position: from-font;
-                text-decoration-skip-ink: none;
-                color: #1F2328;
-              ">
-                {{card.desc}}
-              </ion-text></div>
-            </div>
-          </div>
-        </ion-col>}
+            cursor: pointer;
+            "
+            >
+              <img
+                [src]="card.image"
+                alt=""
+                style="height: 50px; width: 50px;"
+              >
+              <div style="    width: 100%;
+              justify-content: center;
+              display: flex;
+              align-items: center;
+              flex-direction: column;">
+                <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                  <ion-text
+                    class="margin-bottom"
+                    style="font-family: Rubik;
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 28px;
+                    letter-spacing: 0.15000000596046448px;
+                    text-align: center;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+                    color: #1F2328;
+                  ">
+                    {{card.title}}
+                  </ion-text>
+                  <div style="text-align: center;"><ion-text style="font-family: Rubik;
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: 33.6px;
+                    letter-spacing: 0.15000000596046448px;
+                    text-align: center;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+                    color: #1F2328;
+                    ">
+                    {{card.desc}}
+                    </ion-text>
+                  </div>
+                </div>
+              </div>
+            </ion-col>
+          </a>
+        }
       </ion-row>
     </ion-grid>
-  </div>
+    </div>
 
   <!-- <div class="section_map_container">
     <div class="products_title map_title">
@@ -557,7 +561,7 @@
     <div class="separator-line-footer"></div>
 
     <div class="brand_footer_section">
-      <div><a style="cursor: pointer;" href="https://www.facebook.com/aluminios.loga" target="_blank"><img src="../../assets/img/contact/Facebook.png" alt="" width="24" height="24"></a></div>
+      <div><a style="cursor: pointer;" href="https://www.facebook.com/aluminios.loga" target="_blank"><img src="../../assets/img/footer/Facebook.png" alt="" width="24" height="24"></a></div>
       <div style="font-family: Rubik;
       font-size: 14px;
       font-weight: 400;

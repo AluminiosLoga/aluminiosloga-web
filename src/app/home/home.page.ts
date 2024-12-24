@@ -89,22 +89,22 @@ export class HomePage {
   ];
   contact_cards = [
     {
-      image: "../../assets/img/contact/instagram.png",
-      title: 'Instagram',
-      desc: '@AluminiosLoga',
-      url: 'https://maps.app.goo.gl/LFdzK1Rokn28iJiq8'
+      image: "../../assets/img/contact/Facebook.png",
+      title: 'Facebook',
+      desc: 'Aluminios Loga ',
+      url: 'https://www.facebook.com/aluminios.loga'
     },
     {
-      image: "../../assets/img/contact/mail-01.png",
-      title: 'Correo electrónico',
-      desc: 'aluminiosloga@gmail.com',
-      url: 'https://maps.app.goo.gl/LFdzK1Rokn28iJiq8'
+      image: "../../assets/img/contact/whatsapp.png",
+      title: 'Whatsapp',
+      desc: '+52 8111875544',
+      url: 'https://wa.me/528111875544'
     },
     {
       image: "../../assets/img/contact/clock-01.png",
-      title: 'Horario de atención',
-      desc: '09:00 a.m. - 19:00 p.m.',
-      url: 'https://maps.app.goo.gl/LFdzK1Rokn28iJiq8'
+      title: 'Horarios',
+      desc: '09:30 a.m. - 20:00 p.m.',
+      url: '://www.facebook.com/aluminios.loga'
     }
   ]
 
