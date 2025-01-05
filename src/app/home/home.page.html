@@ -20,7 +20,7 @@
           <h2 class="centered-description margin-bottom">
             Contamos con servicio a domicilio en toda el Área Metropolitana de Monterrey.
           </h2>
-          <ion-button color="primary" href="https://api.whatsapp.com/send?phone=8180590778"  target="_blank">Ponte en contacto</ion-button>
+          <ion-button color="primary" [href]="'https://wa.me/' + phone"  target="_blank">Ponte en contacto</ion-button>
         </div>
       </div>
     </div>
@@ -326,7 +326,7 @@
   </div>
 
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">
-    <ion-fab-button href="https://wa.me/528111875544" target="_blank">
+    <ion-fab-button [href]="'https://wa.me/' + phone"  target="_blank">
       <ion-icon name="logo-whatsapp"></ion-icon>
     </ion-fab-button>
   </ion-fab>
@@ -363,7 +363,7 @@
               Facebook
             </ion-text>
           </div>
-          <div class="sub-title-footer padding-top-05" (click)="goToBranch('https://wa.me/528111875544')">
+          <div class="sub-title-footer padding-top-05" (click)="goToBranch('https://wa.me/528126602391')">
             <ion-text>
               Whatsapp
             </ion-text>

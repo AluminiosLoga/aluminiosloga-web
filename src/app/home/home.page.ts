@@ -67,6 +67,7 @@ export class HomePage {
   ];
   currentImage: string = this.images[0];
   currentIndex: number = 0;
+  phone = '528126602391';
 
   branches = [
     {
@@ -98,8 +99,8 @@ export class HomePage {
     {
       image: "../../assets/img/contact/whatsapp.png",
       title: 'Whatsapp',
-      desc: '+52 8111875544',
-      url: 'https://wa.me/528111875544'
+      desc: '+52 8126602391',
+      url: 'https://wa.me/528126602391'
     },
     {
       image: "../../assets/img/contact/clock-01.png",
