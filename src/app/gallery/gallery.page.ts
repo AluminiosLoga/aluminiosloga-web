@@ -16,67 +16,67 @@ export class GalleryPage implements OnInit {
 
   constructor() {
     this.imgList1 = [
-      'svc11.png',
-      'svc3.png',
-      'svc4.png',
-      'svc7.png',
-      'svc18.png',
-      'svc23.png',
+      'svc11.webp',
+      'svc3.webp',
+      'svc4.webp',
+      'svc7.webp',
+      'svc18.webp',
+      'svc23.webp',
     ];
 
     this.imgList2 = [
-      'svc16.png',
-      'svc8.png',
-      'svc5.png',
-      'svc10.png',
-      'svc6.png',
+      'svc16.webp',
+      'svc8.webp',
+      'svc5.webp',
+      'svc10.webp',
+      'svc6.webp',
     ];
 
     this.imgList3 = [
-      'svc9.png',
-      'svc14.png',
-      'svc13.png',
-      'svc15.png',
-      'svc1.png',
-      'svc17.png',
+      'svc9.webp',
+      'svc14.webp',
+      'svc13.webp',
+      'svc15.webp',
+      'svc1.webp',
+      'svc17.webp',
     ];
 
     this.imgList4 = [
-      'svc2.png',
-      'svc19.png',
-      'svc20.png',
-      'svc21.png',
-      'svc22.png',
-      'svc12.png',
+      'svc2.webp',
+      'svc19.webp',
+      'svc20.webp',
+      'svc21.webp',
+      'svc22.webp',
+      'svc12.webp',
     ];
 
     this.imgListMobile1 = [
-      'svc11.png',
-      'svc3.png',
-      'svc4.png',
-      'svc16.png',
-      'svc8.png',
-      'svc5.png',
-      'svc10.png',
-      'svc6.png',
-      'svc7.png',
-      'svc18.png',
-      'svc23.png',
+      'svc11.webp',
+      'svc3.webp',
+      'svc4.webp',
+      'svc16.webp',
+      'svc8.webp',
+      'svc5.webp',
+      'svc10.webp',
+      'svc6.webp',
+      'svc7.webp',
+      'svc18.webp',
+      'svc23.webp',
     ];
 
     this.imgListMobile2 = [
-      'svc9.png',
-      'svc14.png',
-      'svc13.png',
-      'svc2.png',
-      'svc19.png',
-      'svc20.png',
-      'svc21.png',
-      'svc22.png',
-      'svc12.png',
-      'svc15.png',
-      'svc1.png',
-      'svc17.png',
+      'svc9.webp',
+      'svc14.webp',
+      'svc13.webp',
+      'svc2.webp',
+      'svc19.webp',
+      'svc20.webp',
+      'svc21.webp',
+      'svc22.webp',
+      'svc12.webp',
+      'svc15.webp',
+      'svc1.webp',
+      'svc17.webp',
     ];
   }
 

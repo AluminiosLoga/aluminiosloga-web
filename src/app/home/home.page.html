@@ -6,7 +6,7 @@
   <div class="home-section" id="home-section">
     <ion-img
       id="slideshow"
-      src="../../assets/img/banner.png"
+      src="../../assets/img/banner.webp"
       style="width: 100%; object-fit: cover; height: 100%;"
     ></ion-img>
 
@@ -29,7 +29,7 @@
   <div class="about_us_container" id="about_us">
     <ion-img
       id="slideshow"
-      src="../../assets/img/about_us/img_about_us_section.png"
+      src="../../assets/img/about_us/img_about_us_section.webp"
       style="width: 100%; object-fit: cover; height: 100%;"
     ></ion-img>
 
@@ -75,7 +75,7 @@
         <ion-row class="services_row">
           <ion-col>
             <img
-              src="../../assets/img/services/svc_viviendas.png" 
+              src="../../assets/img/services/svc_viviendas.webp" 
               alt=""
               width="352px"
               height="277px"
@@ -96,7 +96,7 @@
           </ion-col>
           <ion-col>
             <img
-              src="../../assets/img/services/svc_empresas.png" 
+              src="../../assets/img/services/svc_empresas.webp" 
               alt=""
               width="352px"
               height="277px"
@@ -117,7 +117,7 @@
           </ion-col>
           <ion-col>
             <img
-              src="../../assets/img/services/svc_negocios.png" 
+              src="../../assets/img/services/svc_negocios.webp" 
               alt=""
               width="352px"
               height="277px"
@@ -144,71 +144,6 @@
       <ion-button fill="outline" (click)="navigateTo('gallery')">Ver Galería</ion-button>
     </div>
   </div>
-
-  <!-- <div class="products_container" id="services-section">
-    <div class="products_title">
-      <h2 style="font-size: 3rem; font-weight: 500; color: white;">Servicios</h2>
-    </div>
-
-    <ion-grid class="our_services margin-bottom">
-      <ion-row>
-        <ion-col>
-          <div class = "card" (click)="navigateTo('gallery')">
-            <div class="card-image">
-              <img src="../../assets/img/services/svc22.png">
-            </div>
-            <div class="card-title-image">
-              <ion-text>Canceles para baño</ion-text>
-            </div>
-          </div>
-        </ion-col>
-
-        <ion-col>
-          <div class = "card" (click)="navigateTo('gallery')">
-            <div class="card-image">
-              <img src="../../assets/img/services/svc21.png">
-            </div>
-            <div class="card-title-image">
-              <ion-text>Repisas</ion-text>
-            </div>
-          </div>
-        </ion-col>
-
-        <ion-col>
-          <div class = "card" (click)="navigateTo('gallery')">
-            <div class="card-image">
-              <img src="../../assets/img/services/svc13.png">
-            </div>
-            <div class="card-title-image">
-              <ion-text>Cocinetas</ion-text>
-            </div>
-          </div>
-        </ion-col>
-
-        <ion-col>
-          <div class = "card" (click)="navigateTo('gallery')">
-            <div class="card-image">
-              <img src="../../assets/img/services/svc19.png">
-            </div>
-            <div class="card-title-image">
-              <ion-text>Ventanas</ion-text>
-            </div>
-          </div>
-        </ion-col>
-
-        <ion-col>
-          <div class = "card" (click)="navigateTo('gallery')">
-            <div class="card-image">
-              <img src="../../assets/img/services/svc14.png">
-            </div>
-            <div class="card-title-image">
-              <ion-text>Puertas</ion-text>
-            </div>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </div> -->
 
   <div class="sucursales_section" id="sucursales-section">
     <div class="sucursales-header">
@@ -264,35 +199,6 @@
         }
       </ion-row>
     </ion-grid>
-
-    <!-- <div class="products_title">
-      <h2 style="font-size: 3rem; font-weight: 500; margin-top: 1rem;">Encuentra tu Sucursal</h2>
-    </div> -->
-
-    <!-- <div class="sucursales_container">
-      <ion-grid style="width: 100%;">
-        @for(branch of branches; track $index) {
-          <ion-row style="width: 100%;" class="margin-bottom">
-            <ion-col style="display: flex; justify-content: center; align-items: center; width: 100%;">
-              <div style="width: 30%;">
-                <ion-img [src]="branch.image" (click)="openMap(branch.url)"  style="cursor: pointer; width: 100%; object-fit: cover;"></ion-img>
-              </div>
-              <div class="branch-info" style="width: 70%; padding-left: 2rem;">
-                <div class="address">
-                  <ion-text class="branch-address">{{ branch.address }}</ion-text>
-                </div>
-                <div class="btn goAddress">
-                  <a (click)="openMap(branch.url)" style="cursor: pointer;">
-                    Ver en Google Maps 
-                    <ion-icon name="open-outline"></ion-icon>
-                  </a>
-                </div>
-              </div>
-            </ion-col>
-          </ion-row>
-        }
-      </ion-grid>
-    </div> -->
   </div>
 
   <div class="frequent_questions_section" id="freq_questions">
@@ -332,7 +238,6 @@
                 }
               </div>
             </ion-accordion>
-            <!-- <hr style="border-top: 1px solid #931F36; margin: 0.5rem 0;"> -->
           </ion-accordion-group>
         }
       </div>
@@ -418,59 +323,7 @@
         }
       </ion-row>
     </ion-grid>
-    </div>
-
-  <!-- <div class="section_map_container">
-    <div class="products_title map_title">
-      <h2 style="margin: 0; color: white;">Nosotros te decimos como llegar</h2>
-    </div>
-    <div class="map_container">
-      <app-map></app-map>
-    </div>
-    <div class="footer_map">
-      <div class="map_direction">
-        <ion-text class="text_1" style="color: white;">
-          Manuel Ordoñez 1414, Hacienda de Santa Catarina, 66357 Santa Catarina, N. L.
-        </ion-text>
-      </div>
-      
-      <div class="map_phone_container">
-        <div class="phone">
-          <ion-text class="text_1" style="color: white;">81-11-87-55-44</ion-text>
-        </div>
-      </div>
-    </div>
   </div>
-
-  <img src="" alt=""> -->
-
-  <!-- <div id="frequent-questions-section" style="padding: 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-    <div class="products_title">
-      <h2 style="font-size: 3rem; font-weight: 500; margin-top: 1rem;">Preguntas frecuentes</h2>
-    </div>
-
-    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; width: 70%;">
-      @for(question of frequent_questions; track $index) {
-        <ion-accordion-group style="min-width: 80%;">
-          <ion-accordion value="first">
-            <ion-item slot="header">
-              <ion-label>{{question.question}}</ion-label>
-            </ion-item>
-            <div style="padding: 1rem;" slot="content">
-              @for(desc of question.descriptions; track $index) {
-                <div>
-                  <ion-text style="font-size: 1rem;">
-                    {{desc}}
-                  </ion-text>
-                </div>
-              }
-            </div>
-          </ion-accordion>
-          <hr style="border-top: 1px solid #931F36; margin: 0.5rem 0;">
-        </ion-accordion-group>
-      }
-    </div>
-  </div> -->
 
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">
     <ion-fab-button href="https://wa.me/528111875544" target="_blank">
@@ -561,38 +414,6 @@
 
   </footer>
 </ion-content>
-
-<!-- Menú lateral -->
-<!-- <ion-menu side="end" content-id="main-content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menú</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <ion-content>
-    <ion-list>
-      <ion-item (click)="closeMenu()">Inicio</ion-item>
-      <ion-item (click)="closeMenu()">Productos</ion-item>
-      <ion-item (click)="closeMenu()">Contacto</ion-item>
-    </ion-list>
-  </ion-content>
-</ion-menu> -->
-
-<!-- <ion-menu side="end" contentId="main-content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu Content</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content>
-    <ion-list>
-      <ion-item (click)="closeMenu()">Inicio</ion-item>
-      <ion-item (click)="closeMenu()">Productos</ion-item>
-      <ion-item (click)="closeMenu()">Contacto</ion-item>
-    </ion-list>
-  </ion-content>
-</ion-menu> -->
 
 <!-- Menú personalizado -->
 <div class="custom-menu" *ngIf="isMenuOpen">

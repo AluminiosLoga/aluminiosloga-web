@@ -407,19 +407,13 @@ ion-button {
   margin-bottom: 4rem
 }
 
-// .img-sucursal-separator {
-//   top: 0;
-//   left: 23%;
-//   position: absolute;
-// }
-
 .img-sucursal-separator {
   width: 60px;
   height: 100%;
   position: absolute;
   top: 0;
-  left: 30%; /* Centramos el elemento horizontalmente */
-  transform: translateX(-50%); /* Ajustamos para que el punto medio esté centrado */
+  left: 30%;
+  transform: translateX(-50%);
 }
 
 .sucursales_title_card {
@@ -505,39 +499,22 @@ ul {
   max-width: 35%;
 }
 
-// ion-accordion {
-//   background: transparent;
-// }
-
 .ion-accordion-toggle-icon {
   color: #4185AA;
 }
 
 ion-item {
-  // --background: black;
   --background: #4185AA1A;
-  // --border-radius: 4px;
-  // --detail-icon-color: white;
   --min-height: 3.5rem;
-  // color: white;
   margin: 0.5rem;
-  //  Poner ese cuando este activo // border-bottom: 1px solid #4185AA; 
   box-shadow: 0px 2px 10px 0px #0000001A;
   border-radius: 14px;
 }
-
-// .accordion-expanded {
-//   border-bottom: 1px solid #4185AA;
-// }
 
 ion-accordion.accordion-expanding ion-item[slot='header'],
 ion-accordion.accordion-expanded ion-item[slot='header'] {
   border-bottom: 1px solid #4185AA;
 }
-
-// ion-item:hover {
-//   --color: white; /* Color del texto en hover */
-// }
 
 .contact_section {
   background-color: var(--ion-color-secondary);
@@ -597,19 +574,18 @@ ion-fab-button {
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  text-decoration: none; /* Asegura que no tenga subrayado por defecto */
-  transition: text-decoration 0.2s ease; /* Añade una transición suave */
+  text-decoration: none;
+  transition: text-decoration 0.2s ease;
 }
 
 .sub-title-footer:hover {
-  text-decoration: underline; /* Añade la línea bajo el texto en hover */
+  text-decoration: underline;
 }
 
 
 .separator-line-footer {
   height: 1px;
   width: 95%;
-  // border-radius: 10px;
   margin: 1.25rem 0rem;
   border: 1px solid #404040
 }
@@ -634,11 +610,6 @@ ion-fab-button {
 }
 
 @media (max-width:768px) {
-  // ion-toolbar {
-  //   padding-inline: 1rem;
-  //   height: 100px;
-  // }
-
   .photo-gallery {
     flex-direction: column;
   }
@@ -654,16 +625,6 @@ ion-fab-button {
       display: none;
     }
   }
-
-  // /* Oculta los botones del menú en pantallas pequeñas */
-  // .desktop-menu {
-  //   display: none;
-  // }
-
-  // /* Muestra el icono de menú hamburguesa en pantallas pequeñas */
-  // .mobile-menu-icon {
-  //   display: block;
-  // }
 
   .home-info-section {
     top: -85px;
@@ -758,7 +719,6 @@ ion-fab-button {
 
   .img-sucursal-separator {
     width: 40px;
-    // height: 100%;
   }
 
   .sucursales_title_card {
@@ -859,7 +819,7 @@ ion-fab-button {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9); /* Fondo negro semitransparente */
+  background-color: rgba(0, 0, 0, 0.9);
   z-index: 1;
 }
 
@@ -888,5 +848,5 @@ ion-fab-button {
 }
 
 .menu-content ion-item:hover {
-  color: #4185AA; /* Cambia el color al pasar el mouse */
+  color: #4185AA;
 }
